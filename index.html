@@ -155,7 +155,46 @@
           </div>
         </div>
 
-        <!-- Project 4: eVTOL -->
+        <!-- Project 4: MAVBE -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <span class="project-date">Mar 2026</span>
+          </div>
+          <h3 class="project-title">MAVBE: Behavior-Aware Multi-Object Tracking</h3>
+          <p class="project-desc">Built a 3D pedestrian tracking framework coupling an Interacting Multiple Model (IMM) filter &mdash; blending Constant Velocity, Coordinated Turn, and Constant Acceleration models &mdash; with Social Force augmentation. Implemented the behavioral IMM filter (CV/CT/CA EKF updates), camera-to-world coordinate transforms, Markov transition matrix calibration, and depth unprojection within a modified DeepSORT pipeline.</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> 55% RMSE reduction (0.50 m vs 1.10 m) and 68% fewer identity switches vs. vanilla Kalman filter baseline at 5-pedestrian density. Validated on real-world video.
+          </div>
+          <div class="project-tags">
+            <span>State Estimation</span><span>IMM-EKF</span><span>CARLA</span><span>DeepSORT</span><span>YOLOv9</span><span>Python</span>
+          </div>
+        </div>
+
+        <!-- Project 5: StarNav -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="project-date">Mar 2026</span>
+          </div>
+          <h3 class="project-title">StarNav: GPS-Free Lunar Rover Localization</h3>
+          <p class="project-desc">Developed a celestial navigation system enabling GPS-free position estimation for lunar rovers using star pattern recognition and probabilistic inference. Built a pipeline from star detection (multi-threshold blob detection) through coordinate transformation to lunar ENU frames, geometric signature extraction from star triangles, and particle filter-based localization across a 200 km search region.</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> Achieved ~40 km localization accuracy from sky imagery alone. Improved star detection from 60% to 100% and expanded triangle signatures from 20 to 364, reducing search space from 38M km&sup2; to 126k km&sup2;.
+          </div>
+          <div class="project-tags">
+            <span>Particle Filter</span><span>Astropy</span><span>OpenCV</span><span>NumPy</span><span>Localization</span><span>Space</span>
+          </div>
+          <div class="project-link">
+            <a href="https://github.com/kothari1/StarNav" target="_blank">View on GitHub &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 6: eVTOL -->
         <div class="project-card">
           <div class="project-header">
             <div class="project-icon">

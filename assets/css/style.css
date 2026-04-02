@@ -486,6 +486,23 @@ body {
   font-family: var(--font-mono);
 }
 
+.project-link {
+  margin-top: 0.75rem;
+}
+
+.project-link a {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+  color: var(--accent-dim);
+}
+
 /* ===== Experience Timeline ===== */
 .timeline {
   position: relative;
