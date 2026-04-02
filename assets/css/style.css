@@ -746,6 +746,27 @@ body {
   margin-bottom: 1rem;
 }
 
+.subsection-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  margin-top: 2rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--accent);
+}
+
+.subsection-title:first-of-type {
+  margin-top: 0;
+}
+
+.achievement-icon.fellowship {
+  background: rgba(0, 200, 120, 0.15);
+  color: #00c878;
+  border: 2px solid rgba(0, 200, 120, 0.3);
+  font-size: 0.8rem;
+}
+
 .achievement-icon.trophy {
   background: rgba(255, 215, 0, 0.15);
   color: #ffd700;
