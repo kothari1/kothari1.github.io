@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Kothari | Robotics &amp; Autonomy</title>
+  <meta name="description" content="Portfolio of Aditya Kothari - MS Aeronautics & Astronautics at Stanford. Robotics, Autonomous Systems, and AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Particle canvas background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AK</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">&gt; Hello, I'm</p>
+        <h1 class="hero-name">Aditya Kothari</h1>
+        <p class="hero-tagline typing-effect">Robotics &amp; Autonomy Researcher</p>
+        <p class="hero-sub">MS Aeronautics &amp; Astronautics @ Stanford University</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="Aditya_Portfolio.pdf" class="btn btn-outline" target="_blank">Download Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-frame">
+          <img src="assets/images/headshot.jpg" alt="Aditya Kothari" />
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">01.</span> About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a graduate student at <strong>Stanford University</strong> pursuing an MS in Aeronautics & Astronautics with a perfect 4.0 GPA. My research at the <strong>Stanford Multi-Robot Systems Lab</strong> focuses on semantic feature extraction for autonomous navigation using egocentric vision data from 3D Gaussian Splats.</p>
+          <p>My work sits at the intersection of <strong>robotics, autonomous systems, and AI</strong> &mdash; building intelligent systems that perceive, reason, and act in complex environments. From language-steered autonomous driving to hierarchical reinforcement learning for robotic control, I'm passionate about pushing the boundaries of robot autonomy.</p>
+          <p>Prior to Stanford, I graduated top of my class from VIT with a BS in Mechanical Engineering, where I led a 25-member robotics team deploying a fleet of 7 UAVs and robots.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-number">4.0</span>
+            <span class="highlight-label">GPA at Stanford</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">7+</span>
+            <span class="highlight-label">Robots Deployed</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">2</span>
+            <span class="highlight-label">Patents Filed</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">1</span>
+            <span class="highlight-label">Publication (JIF 7.9)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">02.</span> Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1: LangDrive -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <span class="project-date">Dec 2025</span>
+          </div>
+          <h3 class="project-title">LangDrive: Language-Steered Autonomous Driving</h3>
+          <p class="project-desc">Developed a hierarchical autonomy stack integrating Vision-Language Models (VLMs) for high-level decision making in autonomous vehicles within the CARLA simulator. Implemented a natural language interface using LLaVA VLM and RGB camera feed to process human commands, enabling safety-aware reasoning and temporal maneuvers.</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> Successfully validated the "See, Decide, Act" loop in complex urban environments &mdash; safe behavior in ~75% of cases with prompting alone.
+          </div>
+          <div class="project-tags">
+            <span>Gen-AI</span><span>VLMs</span><span>CARLA</span><span>LLaVA</span><span>Autonomous Driving</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Hierarchical RL -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <span class="project-date">Nov 2025</span>
+          </div>
+          <h3 class="project-title">Hierarchical RL for Robust Robotic Control</h3>
+          <p class="project-desc">Architected a decoupled policy stack using Soft Actor-Critic (SAC) for high-level planning and PPO for low-level force control, modeled as a POMDP to handle high perception noise. Designed custom dense reward functions with stability heuristics for sim-to-real transfer.</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> Achieved 2x average stack height vs. discrete baselines (27.18 vs 14.85 blocks), outperforming non-hierarchical methods by 5x.
+          </div>
+          <div class="project-tags">
+            <span>Python</span><span>PyBullet</span><span>SAC</span><span>PPO</span><span>POMDP</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Autonomous Ground Robot -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 6V4h10v2"/></svg>
+            </div>
+            <span class="project-date">Sep 2025</span>
+          </div>
+          <h3 class="project-title">Autonomous Ground Robot: Full-Stack Navigation</h3>
+          <p class="project-desc">Built a modular on-robot autonomy stack in ROS2/C++, implementing sensor fusion via EKF and robust global localization using Particle Filters (MCL). Integrated YOLO-based perception with Occupancy Grid Mapping and a hybrid A*-DWA planner for safe navigation in cluttered environments.</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> Successfully achieved self-navigation in dynamic environments with robust sensor and path-planning integration.
+          </div>
+          <div class="project-tags">
+            <span>ROS2</span><span>C++</span><span>Gazebo</span><span>SLAM</span><span>EKF</span><span>YOLO</span>
+          </div>
+        </div>
+
+        <!-- Project 4: eVTOL -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <span class="project-date">Nov 2023</span>
+          </div>
+          <h3 class="project-title">Autonomous E-VTOL for Urban Air Mobility</h3>
+          <p class="project-desc">Designed and integrated a 1:10 scale prototype eVTOL for urban air mobility. Implemented autonomous waypoint navigation and obstacle avoidance using MAVSDK-Python on a Pixhawk platform. Achieved a 14 km operational range.</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> Won Rank 1 and INR 300,000 prize at the GKN Aerospace Sustainable Aviation Challenge.
+          </div>
+          <div class="project-tags">
+            <span>MAVSDK</span><span>Pixhawk</span><span>UAV</span><span>GKN Aerospace</span>
+          </div>
+        </div>
+
+        <!-- Project 5: AIRBUS -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20V10l7-7 7 7v10M9 20v-6h6v6"/></svg>
+            </div>
+            <span class="project-date">Feb 2024</span>
+          </div>
+          <h3 class="project-title">Dynamic Safety Braking System (AIRBUS)</h3>
+          <p class="project-desc">Developed an algorithm integrating flight and braking mechanics using Reduced Order Modeling (ROM). Architected a runway slope prediction model using OpenCV to interface with the Automatic Flight Control System (AFCS).</p>
+          <div class="project-outcome">
+            <strong>Key Outcome:</strong> Ranked 3rd in the Airbus National Flight Challenge for maximizing braking safety.
+          </div>
+          <div class="project-tags">
+            <span>OpenCV</span><span>ROM</span><span>Flight Systems</span><span>AIRBUS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">03.</span> Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Student Researcher</h3>
+              <span class="timeline-company">Stanford Multi-Robot Systems Lab</span>
+              <span class="timeline-date">Jan 2026 &ndash; Present</span>
+              <span class="timeline-location">Stanford, CA</span>
+            </div>
+            <ul>
+              <li>Developing a semantic feature extraction layer for autonomous navigation using egocentric vision data from 3D Gaussian Splats.</li>
+              <li>Designing a model for complex language-guided navigation tasks through a novel sparse-feature world representation trained in a 3D-GS simulation environment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Engineering Intern (Software Tools)</h3>
+              <span class="timeline-company">Boeing</span>
+              <span class="timeline-date">May 2024 &ndash; Jul 2024</span>
+              <span class="timeline-location">Chennai, India</span>
+            </div>
+            <ul>
+              <li>Developed Python-based tools to automate engineering databases, reducing design release time by 30%.</li>
+              <li>Conducted Value Stream Mapping and deployed software solutions improving safety validation workflows, reducing total cycle time by 7.8%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Team Captain &amp; Technical Lead</h3>
+              <span class="timeline-company">Team Veloce (University UAV &amp; Robotics Team)</span>
+              <span class="timeline-date">Apr 2022 &ndash; May 2024</span>
+              <span class="timeline-location">Vellore, India</span>
+            </div>
+            <ul>
+              <li>Directed a 25-member team to develop and deploy a fleet of 7 UAVs/Robots.</li>
+              <li>Oversaw the full software lifecycle, from algorithm development to on-robot deployment and field testing.</li>
+              <li>Implemented rigorous system integration testing across multiple robotic platforms.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">04.</span> Education</h2>
+      <div class="education-grid">
+        <div class="edu-card">
+          <div class="edu-logo">Stanford</div>
+          <div class="edu-info">
+            <h3>Stanford University</h3>
+            <p class="edu-degree">MS in Aeronautics &amp; Astronautics</p>
+            <p class="edu-gpa">GPA: 4.0 / 4.0</p>
+            <p class="edu-date">Sep 2025 &ndash; Mar 2027</p>
+            <div class="edu-honors">
+              <span>NSF Scholar '25</span>
+              <span>KC Mahindra Scholar '25</span>
+              <span>JITO JEAP Scholar '25</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-logo">VIT</div>
+          <div class="edu-info">
+            <h3>Vellore Institute of Technology</h3>
+            <p class="edu-degree">BS in Mechanical Engineering</p>
+            <p class="edu-gpa">GPA: 4.0 / 4.0</p>
+            <p class="edu-date">Jul 2021 &ndash; Jul 2025</p>
+            <div class="edu-honors">
+              <span>Merit Scholarship '22-'25</span>
+              <span>Student Achiever '24 &amp; '25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">05.</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Robotics &amp; Autonomy</h3>
+          <div class="skill-tags">
+            <span>ROS2</span><span>C++</span><span>Python</span><span>Gazebo</span><span>SLAM</span>
+            <span>Path Planning (A*, DWA)</span><span>Human-Robot Collaboration</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Control &amp; Learning</h3>
+          <div class="skill-tags">
+            <span>Reinforcement Learning</span><span>MPC</span><span>PID</span>
+            <span>Extended Kalman Filter</span><span>Human-Robot Interaction</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools &amp; Infrastructure</h3>
+          <div class="skill-tags">
+            <span>Linux</span><span>Git</span><span>Docker</span><span>PyBullet</span>
+            <span>OpenCV</span><span>HPC</span><span>Physics-Informed ML</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Domain Knowledge</h3>
+          <div class="skill-tags">
+            <span>CFD (Ansys Fluent)</span><span>FEM</span><span>Model Reduction</span>
+            <span>Sensor Fusion (LiDAR/Vision)</span><span>Collision Avoidance</span><span>Navigation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">06.</span> Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon trophy">1st</div>
+          <h3>GKN Aerospace Sustainable Aviation Challenge</h3>
+          <p>Rank 1 with INR 300,000 prize for autonomous eVTOL design</p>
+          <span class="achievement-date">Nov 2023</span>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon medal">3rd</div>
+          <h3>AIRBUS National Flight Challenge</h3>
+          <p>Safety systems &mdash; dynamic braking for inclined runways</p>
+          <span class="achievement-date">Feb 2024</span>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon paper">Pub</div>
+          <h3>Results in Engineering (Elsevier)</h3>
+          <p>Journal Impact Factor 7.9 &mdash; Grain boundary &amp; micro-texture evolution in GRCop Alloys</p>
+          <span class="achievement-date">Feb 2025</span>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon patent">IP</div>
+          <h3>2 Patents Filed</h3>
+          <p>Wear Analysis Equipment (2025) &amp; Electronic Spherical Steam Trap (2024)</p>
+          <span class="achievement-date">2024 &ndash; 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-number">07.</span> Get In Touch</h2>
+      <div class="contact-content">
+        <p>I'm currently looking for summer 2026 internship opportunities in robotics, autonomous systems, and AI. Feel free to reach out!</p>
+        <div class="contact-links">
+          <a href="mailto:kothari1@stanford.edu" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+            <span>kothari1@stanford.edu</span>
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-kothari-0904a4237/" class="contact-item" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/kothari1" class="contact-item" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Designed &amp; Built by Aditya Kothari</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
