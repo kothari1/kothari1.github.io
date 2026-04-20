@@ -3,21 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya Kothari | Robotics &amp; Autonomy Researcher</title>
-  <meta name="description" content="Aditya Kothari — MS Aeronautics & Astronautics at Stanford. Researching language-steered autonomy and semantic navigation using 3D Gaussian Splats. NSF Scholar." />
+  <title>Aditya Kothari | Robotics &amp; Autonomy — Stanford</title>
+  <meta name="description" content="Aditya Kothari — Stanford MS Aeronautics & Astronautics. Researching language-steered autonomy and semantic navigation with 3D Gaussian Splats at the Multi-Robot Systems Lab. NSF Scholar, KC Mahindra Scholar. Seeking summer 2026 internship." />
+
+  <!-- JSON-LD structured data for LLM/AI agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Kothari",
+    "url": "https://kothari1.github.io",
+    "email": "kothari1@stanford.edu",
+    "telephone": "+14086888878",
+    "jobTitle": "Graduate Researcher, Robotics & Autonomous Systems",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Stanford University",
+      "department": "Department of Aeronautics and Astronautics"
+    },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "Stanford University", "description": "MS Aeronautics & Astronautics, GPA 4.0/4.0, Sep 2025–Mar 2027" },
+      { "@type": "EducationalOrganization", "name": "Vellore Institute of Technology", "description": "BS Mechanical Engineering, GPA 4.0/4.0, Jul 2021–Jul 2025" }
+    ],
+    "award": [
+      "NSF Scholar 2025", "KC Mahindra Scholar 2025", "JITO JEAP Scholar 2025",
+      "Narotam Sekhsaria Foundation Fellow 2025",
+      "Rank 1 – GKN Aerospace Sustainable Aviation Challenge (INR 300,000)",
+      "Rank 1 – Forbes Marshall Technical Challenge",
+      "Rank 2 – Honeywell Aerospace Ideathon",
+      "Rank 3 – AIRBUS National Flight Challenge"
+    ],
+    "knowsAbout": ["Robotics","Autonomous Navigation","Reinforcement Learning","Vision-Language Models","ROS2","3D Gaussian Splats","State Estimation","Sensor Fusion","Path Planning","Autonomous Vehicles","UAVs"],
+    "sameAs": ["https://www.linkedin.com/in/aditya-kothari-0904a4237/","https://github.com/kothari1"],
+    "description": "Aditya Kothari is an MS student at Stanford University (Aeronautics & Astronautics) and researcher at the Stanford Multi-Robot Systems Lab working on language-guided autonomous navigation using 3D Gaussian Splats and egocentric vision. Three national fellowships (NSF, KC Mahindra, JITO JEAP). 4.0 GPA. Published in Elsevier (JIF 7.9), 2 patents. Industry: Boeing, Tata Motors. Seeking summer 2026 internship in robotics/autonomous systems/AI."
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <!-- Particle canvas background -->
   <canvas id="particles"></canvas>
 
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">AK</a>
+      <a href="#hero" class="nav-brand">
+        <img src="assets/images/stanford-logo.svg" alt="Stanford" class="nav-stanford-logo" />
+        <span class="nav-divider"></span>
+        <span class="nav-logo">AK</span>
+        <span class="nav-divider"></span>
+        <span class="nav-msl">Multi-Robot Systems Lab</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -33,27 +72,37 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section — spotlight tiles at bottom are visible without scrolling -->
   <section id="hero">
-    <div class="hero-content">
+    <div class="hero-main">
       <div class="hero-text">
         <p class="hero-greeting">&gt; Hello, I'm</p>
         <h1 class="hero-name">Aditya Kothari</h1>
         <p class="hero-tagline">Robotics &amp; Autonomy Researcher</p>
-        <p class="hero-sub">MS Aeronautics &amp; Astronautics @ Stanford University</p>
+        <p class="hero-sub">Building autonomous systems that perceive, reason, and act</p>
+
+        <div class="stanford-badge">
+          <img src="assets/images/stanford-logo.svg" alt="Stanford" class="stanford-badge-logo" />
+          <div class="stanford-info">
+            <span class="stanford-university">Stanford University</span>
+            <span class="stanford-dept">Multi-Robot Systems Lab &nbsp;&middot;&nbsp; MS AeroAstro &nbsp;&middot;&nbsp; GPA 4.0</span>
+          </div>
+        </div>
+
         <div class="hero-credentials">
           <span class="hero-credential-badge">NSF Scholar '25</span>
           <span class="hero-credential-badge">KC Mahindra Scholar '25</span>
-          <span class="hero-credential-badge">GPA 4.0 / 4.0</span>
+          <span class="hero-credential-badge">Narotam Sekhsaria Fellow '25</span>
         </div>
+
         <div class="hero-cta">
           <a href="#research" class="btn btn-primary">View Research</a>
           <a href="Aditya_Kothari_Resume.pdf" class="btn btn-outline" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;margin-right:6px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;margin-right:6px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Resume
           </a>
           <a href="Aditya_Portfolio.pdf" class="btn btn-outline" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;margin-right:6px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;margin-right:6px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Portfolio
           </a>
         </div>
@@ -64,8 +113,37 @@
         </div>
       </div>
     </div>
-    <div class="scroll-indicator">
-      <span></span>
+
+    <!-- Spotlight tiles: visible in first viewport, guide to key sections -->
+    <div class="hero-spotlight">
+      <a href="#research" class="spotlight-card">
+        <span class="spotlight-icon">🔬</span>
+        <div class="spotlight-text">
+          <span class="spotlight-title">Stanford MSL Research</span>
+          <span class="spotlight-desc">Language-guided autonomy &middot; 3D Gaussian Splats</span>
+        </div>
+      </a>
+      <a href="#achievements" class="spotlight-card">
+        <span class="spotlight-icon">🏆</span>
+        <div class="spotlight-text">
+          <span class="spotlight-title">3 National Fellowships</span>
+          <span class="spotlight-desc">NSF &middot; KC Mahindra &middot; Narotam Sekhsaria</span>
+        </div>
+      </a>
+      <a href="#publications" class="spotlight-card">
+        <span class="spotlight-icon">📄</span>
+        <div class="spotlight-text">
+          <span class="spotlight-title">Published &amp; Patented</span>
+          <span class="spotlight-desc">Elsevier (JIF 7.9) &middot; 2 utility patents</span>
+        </div>
+      </a>
+      <a href="#projects" class="spotlight-card">
+        <span class="spotlight-icon">🤖</span>
+        <div class="spotlight-text">
+          <span class="spotlight-title">8 Technical Projects</span>
+          <span class="spotlight-desc">Autonomous vehicles &middot; robot learning &middot; space nav</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -76,23 +154,23 @@
       <div class="research-content">
         <div class="research-main">
           <p class="research-intro">
-            I'm a graduate student at <strong>Stanford University</strong> pursuing an MS in Aeronautics &amp; Astronautics, supported by three national fellowships. My research sits at the intersection of <strong>robotics, perception, and natural language</strong> &mdash; building intelligent systems that understand their environment semantically and act on complex human instructions. Prior to Stanford, I graduated top of my class from VIT with a BS in Mechanical Engineering, led a 25-member university robotics team deploying 7 UAVs and robots, and held engineering roles at <strong>Boeing and Tata Motors</strong>.
+            I'm a graduate student at <strong>Stanford University</strong> pursuing an MS in Aeronautics &amp; Astronautics, supported by three national fellowships. My research at the <strong>Stanford Multi-Robot Systems Lab (MSL)</strong> focuses on language-steered autonomy and semantic feature extraction &mdash; building systems that can follow complex natural language navigation tasks through rich, semantically-aware world representations. Before Stanford, I graduated top of my class from VIT with a BS in Mechanical Engineering, led a 25-member university robotics team deploying 7 UAVs and robots, and held engineering roles at <strong>Boeing</strong> and <strong>Tata Motors</strong>.
           </p>
 
           <div class="research-current">
             <div class="research-current-header">
-              <span class="research-label">Current Research</span>
-              <span class="research-status">&#9679; Active</span>
+              <span class="research-label">Current Research &mdash; Stanford MSL</span>
+              <span class="research-status">&#9679; Active &mdash; Jan 2026</span>
             </div>
             <h3>Semantic Navigation via 3D Gaussian Splats</h3>
-            <span class="timeline-company">Stanford Multi-Robot Systems Lab &nbsp;&middot;&nbsp; Jan 2026 &ndash; Present</span>
-            <p>Developing a semantic feature extraction layer for autonomous navigation using egocentric vision data from 3D Gaussian Splats. Designing a model that can autonomously follow complex language-guided navigation tasks through a novel sparse-feature world representation, trained in a 3D-GS simulation environment with a focus on robust sim-to-real transfer.</p>
+            <span class="timeline-company">Stanford Multi-Robot Systems Lab &nbsp;&middot;&nbsp; Advisor: Prof. Mac Schwager</span>
+            <p>Developing a semantic feature extraction layer for autonomous navigation using egocentric vision data from 3D Gaussian Splats (3D-GS). Designing a model that can autonomously follow complex language-guided navigation tasks through a novel sparse-feature world representation trained in a 3D-GS simulation environment, targeting robust sim-to-real transfer for deployment on physical robot platforms.</p>
             <div class="research-tags-strip">
               <span>3D Gaussian Splats</span>
               <span>Language-Guided Navigation</span>
               <span>Egocentric Vision</span>
-              <span>Semantic Features</span>
-              <span>Sim-to-Real</span>
+              <span>Semantic Feature Extraction</span>
+              <span>Sim-to-Real Transfer</span>
             </div>
           </div>
 
@@ -140,179 +218,240 @@
 
         <!-- LangDrive -->
         <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <div class="project-visual pv-ai">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">VLM &middot; Autonomous Driving</span>
+              <span class="project-date">Dec 2025</span>
             </div>
-            <span class="project-date">Dec 2025</span>
-          </div>
-          <h3 class="project-title">LangDrive: Language-Steered Autonomous Driving</h3>
-          <ul class="project-desc">
-            <li>Hierarchical autonomy stack integrating <strong>Vision-Language Models (VLMs)</strong> for high-level decision making in the <strong>CARLA</strong> simulator</li>
-            <li>Natural language interface via <strong>LLaVA VLM</strong> + RGB camera feed for safety-aware reasoning and human command parsing</li>
-            <li>Enables complex <strong>temporal maneuvers</strong> in urban traffic through a "See, Decide, Act" loop</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> Safe behavior in ~75% of cases with natural language prompting alone &mdash; no explicit rule-based programming.
-          </div>
-          <div class="project-tags">
-            <span>Gen-AI</span><span>VLMs</span><span>CARLA</span><span>LLaVA</span><span>Autonomous Driving</span>
+            <h3 class="project-title">LangDrive: Language-Steered Autonomous Driving via VLMs</h3>
+            <p class="project-plain-desc">A hierarchical autonomy stack that interprets natural language commands to drive safely in complex urban environments.</p>
+            <ul class="project-desc">
+              <li>Developed a hierarchical autonomy stack integrating <strong>Vision-Language Models (VLMs)</strong> for high-level semantic decision-making in the <strong>CARLA</strong> simulator</li>
+              <li>Natural language interface via <strong>LLaVA-7B VLM</strong> + RGB camera feed for safety-constrained reasoning and temporal maneuver execution</li>
+              <li>Control bridge translating VLM outputs into low-level steering and throttle commands — validated across urban driving scenarios</li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> Successfully validated "See, Decide, Act" loop — <span class="project-metric">~75% safe behavior rate</span> using natural language prompts alone, without explicit rule-based programming.
+            </div>
+            <div class="project-tags">
+              <span>VLMs</span><span>CARLA</span><span>LLaVA-7B</span><span>Gen-AI</span><span>Python</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Waymo</span><span>Wing</span><span>Wisk</span><span>Archer</span>
+            </div>
           </div>
         </div>
 
         <!-- Hierarchical RL -->
         <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <div class="project-visual pv-rl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">Reinforcement Learning</span>
+              <span class="project-date">Nov 2025</span>
             </div>
-            <span class="project-date">Nov 2025</span>
-          </div>
-          <h3 class="project-title">Hierarchical RL for Robust Robotic Control</h3>
-          <ul class="project-desc">
-            <li>Decoupled policy stack: <strong>SAC</strong> for high-level planning, <strong>PPO</strong> for low-level force control</li>
-            <li>Modeled as a <strong>POMDP</strong> to handle up to 40% perception noise in long-horizon manipulation</li>
-            <li>Custom <strong>dense reward functions</strong> with stability heuristics for sim-to-real transfer</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> 2x average stack height vs. discrete baselines (27.18 vs 14.85 blocks), 5x improvement over non-hierarchical methods.
-          </div>
-          <div class="project-tags">
-            <span>Python</span><span>PyBullet</span><span>SAC</span><span>PPO</span><span>POMDP</span>
+            <h3 class="project-title">Hierarchical RL for Robust Robotic Control under Uncertainty</h3>
+            <p class="project-plain-desc">A decoupled policy architecture for long-horizon manipulation that remains stable under significant perception noise.</p>
+            <ul class="project-desc">
+              <li>Decoupled policy stack: <strong>Soft Actor-Critic (SAC)</strong> for high-level goal selection, <strong>PPO</strong> for low-level force control — outperforms monolithic methods by 5x on long-horizon tasks</li>
+              <li>Modeled as a <strong>POMDP</strong> to handle observation noise up to <strong>40% object half-length</strong>, mitigating compounding errors</li>
+              <li>Custom dense reward function with stability heuristics and multi-stage curriculum for robust <strong>sim-to-real transfer</strong></li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> <span class="project-metric">2x average stack height</span> vs. discrete baselines (<span class="project-metric">27.18 vs 14.85 blocks</span>) in PyBullet.
+            </div>
+            <div class="project-tags">
+              <span>SAC</span><span>PPO</span><span>PyBullet</span><span>POMDP</span><span>Python</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Figure AI</span><span>Boston Dynamics</span><span>Agility</span><span>Skydio</span>
+            </div>
           </div>
         </div>
 
         <!-- Autonomous Ground Robot -->
         <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 6V4h10v2"/></svg>
+          <div class="project-visual pv-robot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 6V4h10v2"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">Full-Stack Robotics</span>
+              <span class="project-date">Sep 2025</span>
             </div>
-            <span class="project-date">Sep 2025</span>
-          </div>
-          <h3 class="project-title">Autonomous Ground Robot: Full-Stack Navigation</h3>
-          <ul class="project-desc">
-            <li>Modular autonomy stack in <strong>ROS2/C++</strong> with <strong>EKF sensor fusion</strong> and Particle Filter (MCL) global localization</li>
-            <li><strong>YOLO-based perception</strong> integrated with Occupancy Grid Mapping</li>
-            <li>Hybrid <strong>A*-DWA planner</strong> for safe navigation in dynamic, cluttered environments</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> Full autonomy stack validated in dynamic environments — robust sensor fusion, perception, and hybrid path planning integrated end-to-end.
-          </div>
-          <div class="project-tags">
-            <span>ROS2</span><span>C++</span><span>Gazebo</span><span>SLAM</span><span>EKF</span><span>YOLO</span>
+            <h3 class="project-title">Autonomous Ground Robot: Full-Stack Navigation Stack</h3>
+            <p class="project-plain-desc">A complete on-robot autonomy system for indoor navigation in cluttered, dynamic environments with moving obstacles.</p>
+            <ul class="project-desc">
+              <li>Modular autonomy stack in <strong>ROS2/C++</strong>: sensor fusion via <strong>EKF</strong> and global localization via Particle Filter (MCL)</li>
+              <li><strong>YOLO-based perception</strong> integrated with Occupancy Grid Mapping to inform a hybrid planner (<strong>A* global + DWA local</strong>)</li>
+              <li>Trajectory tracking controller minimizing cross-track error — validated through real-world and simulation testing</li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> Full autonomous navigation validated in dynamic environments — robust sensor fusion, perception, and hybrid path planning integrated end-to-end.
+            </div>
+            <div class="project-tags">
+              <span>ROS2</span><span>C++</span><span>Gazebo</span><span>EKF</span><span>SLAM</span><span>YOLO</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Skydio</span><span>Zipline</span><span>Waymo</span><span>Boston Dynamics</span>
+            </div>
           </div>
         </div>
 
         <!-- MAVBE -->
         <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <div class="project-visual pv-vision">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><circle cx="6" cy="8" r="1.5"/><circle cx="18" cy="8" r="1.5"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">State Estimation &middot; Tracking</span>
+              <span class="project-date">Mar 2026</span>
             </div>
-            <span class="project-date">Mar 2026</span>
-          </div>
-          <h3 class="project-title">MAVBE: Behavior-Aware Multi-Object Tracking</h3>
-          <ul class="project-desc">
-            <li><strong>IMM filter</strong> blending CV, CT, and CA motion models with <strong>Social Force</strong> augmentation for behavioral tracking</li>
-            <li>CV/CT/CA EKF updates, camera-to-world transforms, and Markov transition matrix calibration</li>
-            <li>Integrated within a modified <strong>DeepSORT pipeline</strong> with depth unprojection for full 3D tracking</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> 55% RMSE reduction (0.50 m vs 1.10 m) and 68% fewer identity switches vs. vanilla Kalman filter at 5-pedestrian density.
-          </div>
-          <div class="project-tags">
-            <span>IMM-EKF</span><span>DeepSORT</span><span>YOLOv9</span><span>CARLA</span><span>Python</span>
+            <h3 class="project-title">MAVBE: Behavior-Aware Multi-Object Tracking</h3>
+            <p class="project-plain-desc">An IMM-based tracker that blends motion models and social dynamics to accurately track multiple objects in 3D.</p>
+            <ul class="project-desc">
+              <li><strong>Interacting Multiple Model (IMM) filter</strong> blending CV, CT, and CA motion models with <strong>Social Force augmentation</strong> for behavior-aware trajectory prediction</li>
+              <li>CV/CT/CA <strong>EKF updates</strong>, camera-to-world transforms, and Markov transition matrix calibration within a modified <strong>DeepSORT pipeline</strong> with depth unprojection for full 3D tracking</li>
+              <li>Validated on real-world video sequences and <strong>CARLA</strong> simulation at varying object densities</li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> <span class="project-metric">55% RMSE reduction</span> (0.50m vs 1.10m) and <span class="project-metric">68% fewer identity switches</span> vs. vanilla Kalman baseline at 5-object density.
+            </div>
+            <div class="project-tags">
+              <span>IMM-EKF</span><span>DeepSORT</span><span>YOLOv9</span><span>CARLA</span><span>Python</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Skydio</span><span>Wing</span><span>Archer</span><span>Wisk</span>
+            </div>
           </div>
         </div>
 
         <!-- StarNav -->
         <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="project-visual pv-space">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">Space &middot; Localization</span>
+              <span class="project-date">Mar 2026</span>
             </div>
-            <span class="project-date">Mar 2026</span>
-          </div>
-          <h3 class="project-title">StarNav: GPS-Free Lunar Rover Localization</h3>
-          <ul class="project-desc">
-            <li><strong>GPS-free localization</strong> via star pattern recognition and probabilistic inference from sky imagery</li>
-            <li>Full pipeline: multi-threshold <strong>blob detection</strong> &rarr; coordinate transforms &rarr; lunar ENU frames &rarr; geometric star triangle signatures</li>
-            <li><strong>Particle filter</strong> localization across a 200 km search region from sky imagery alone</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> ~40 km localization accuracy. Star detection improved from 60% to 100%; triangle signatures expanded from 20 to 364, reducing search space from 38M km&sup2; to 126k km&sup2;.
-          </div>
-          <div class="project-tags">
-            <span>Particle Filter</span><span>Astropy</span><span>OpenCV</span><span>Localization</span><span>Space</span>
-          </div>
-          <div class="project-link">
-            <a href="https://github.com/kothari1/StarNav" target="_blank">View on GitHub &rarr;</a>
+            <h3 class="project-title">StarNav: GPS-Free Lunar Rover Localization</h3>
+            <p class="project-plain-desc">Probabilistic localization for lunar rovers using star pattern recognition and particle filtering from sky imagery alone.</p>
+            <ul class="project-desc">
+              <li>Full pipeline: multi-threshold <strong>blob detection</strong> &rarr; coordinate transforms &rarr; lunar ENU frames &rarr; geometric <strong>star triangle signatures</strong> for robust star pattern recognition</li>
+              <li><strong>Particle filter</strong> localization across a 200 km search region; improved star detection from <strong>60% to 100%</strong></li>
+              <li>Expanded triangle signatures from <strong>20 to 364</strong>, reducing search space from <strong>38M km&sup2; to 126k km&sup2;</strong></li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> <span class="project-metric">~40 km localization accuracy</span> from sky imagery alone &mdash; no GPS, no ground beacons, no surface landmarks.
+            </div>
+            <div class="project-tags">
+              <span>Particle Filter</span><span>Astropy</span><span>OpenCV</span><span>NumPy</span><span>Localization</span>
+            </div>
+            <div class="project-link"><a href="https://github.com/kothari1/StarNav" target="_blank">View on GitHub &rarr;</a></div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>NASA</span><span>Blue Origin</span><span>Astrobotic</span><span>SpaceX</span>
+            </div>
           </div>
         </div>
 
         <!-- eVTOL -->
         <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          <div class="project-visual pv-flight">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">Aerospace &middot; UAV</span>
+              <span class="project-date">Nov 2023</span>
             </div>
-            <span class="project-date">Nov 2023</span>
-          </div>
-          <h3 class="project-title">Autonomous E-VTOL for Urban Air Mobility</h3>
-          <ul class="project-desc">
-            <li>Designed and integrated a <strong>1:10 scale eVTOL prototype</strong> for urban air mobility</li>
-            <li><strong>Autonomous waypoint navigation</strong> and obstacle avoidance via <strong>MAVSDK-Python</strong> on Pixhawk</li>
-            <li>14 km operational range with full autonomous flight capability</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> Rank 1 and INR 300,000 prize at the GKN Aerospace Sustainable Aviation Challenge.
-          </div>
-          <div class="project-tags">
-            <span>MAVSDK</span><span>Pixhawk</span><span>UAV</span><span>GKN Aerospace</span>
+            <h3 class="project-title">Autonomous E-VTOL for Urban Air Mobility</h3>
+            <p class="project-plain-desc">1:10 scale eVTOL prototype with autonomous waypoint navigation and obstacle avoidance — Rank 1 at GKN Aerospace.</p>
+            <ul class="project-desc">
+              <li>Aerodynamic conceptual design and flight systems integration for a <strong>1:10 scale eVTOL</strong> prototype</li>
+              <li>Autonomous waypoint navigation and obstacle avoidance via <strong>MAVSDK-Python</strong> on Pixhawk; 14 km operational range</li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> <span class="project-metric">Rank 1</span> + <span class="project-metric">INR 300,000 prize</span> at GKN Aerospace Sustainable Aviation Challenge.
+            </div>
+            <div class="project-tags">
+              <span>MAVSDK</span><span>Pixhawk</span><span>UAV</span><span>eVTOL</span><span>MAVSDK-Python</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Archer</span><span>Wisk</span><span>Joby</span><span>Zipline</span>
+            </div>
           </div>
         </div>
 
         <!-- AIAA STOL -->
         <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          <div class="project-visual pv-aircraft">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">Aircraft Design</span>
+              <span class="project-date">Nov 2023</span>
             </div>
-            <span class="project-date">Nov 2023</span>
-          </div>
-          <h3 class="project-title">AIAA Compact STOL Air Ambulance Aircraft</h3>
-          <ul class="project-desc">
-            <li>Led full <strong>design-build-fly</strong> cycle from conceptual design to manufacturing and flight testing of 2 prototypes</li>
-            <li>Novel <strong>oblique wing mechanism</strong> for compact parking in constrained hangars</li>
-            <li><strong>10-second turnaround</strong> for rapid emergency deployment</li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> Full design-build-fly cycle completed with folding wing mechanism for emergency medical rapid deployment.
-          </div>
-          <div class="project-tags">
-            <span>AIAA</span><span>Aerodynamics</span><span>Prototyping</span><span>Flight Testing</span>
+            <h3 class="project-title">AIAA Compact STOL Air Ambulance Aircraft</h3>
+            <p class="project-plain-desc">Design-build-fly of a compact STOL aircraft with a novel oblique wing mechanism enabling 10-second emergency deployment.</p>
+            <ul class="project-desc">
+              <li>Led full design-build-fly cycle as team leader and pilot — 2 prototypes from conceptual design to flight test</li>
+              <li>Innovated a <strong>novel oblique wing mechanism</strong> enabling compact hangar storage in constrained spaces</li>
+              <li><strong>10-second turnaround time</strong> from landed to ready-for-takeoff for rapid emergency deployment</li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> Full design-build-fly cycle completed; oblique wing concept advanced to AIAA design review.
+            </div>
+            <div class="project-tags">
+              <span>AIAA</span><span>Aerodynamics</span><span>Prototyping</span><span>Flight Testing</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Archer</span><span>Wisk</span><span>Airbus</span><span>Boeing</span>
+            </div>
           </div>
         </div>
 
         <!-- AIRBUS -->
         <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20V10l7-7 7 7v10M9 20v-6h6v6"/></svg>
+          <div class="project-visual pv-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-type-badge">Aviation Safety</span>
+              <span class="project-date">Jan 2024</span>
             </div>
-            <span class="project-date">Jan 2024</span>
-          </div>
-          <h3 class="project-title">Dynamic Safety Braking System (AIRBUS)</h3>
-          <ul class="project-desc">
-            <li>Algorithm integrating <strong>flight and braking mechanics</strong> via <strong>Reduced Order Modeling (ROM)</strong></li>
-            <li>Runway slope prediction model via <strong>OpenCV</strong> interfaced with the <strong>AFCS</strong></li>
-          </ul>
-          <div class="project-outcome">
-            <strong>Key Outcome:</strong> Ranked 3rd in the Airbus National Flight Challenge for maximizing braking safety on inclined runways.
-          </div>
-          <div class="project-tags">
-            <span>OpenCV</span><span>ROM</span><span>Flight Systems</span><span>AIRBUS</span>
+            <h3 class="project-title">Dynamic Safety Braking System — AIRBUS Challenge</h3>
+            <p class="project-plain-desc">Physics-based braking algorithm using ROM and computer vision to assist pilots on inclined runways.</p>
+            <ul class="project-desc">
+              <li>Algorithm integrating flight and braking mechanics via <strong>Reduced Order Modeling (ROM)</strong> for real-time performance prediction</li>
+              <li>Runway slope estimation via <strong>OpenCV</strong> interfaced with the <strong>Automatic Flight Control System (AFCS)</strong></li>
+            </ul>
+            <div class="project-outcome">
+              <strong>Key Outcome:</strong> <span class="project-metric">Rank 3</span> nationally — Airbus National Flight Challenge for aviation safety.
+            </div>
+            <div class="project-tags">
+              <span>OpenCV</span><span>ROM</span><span>AFCS</span><span>Flight Systems</span>
+            </div>
+            <div class="project-companies">
+              <span class="companies-label">↗ Relevant to</span>
+              <span>Airbus</span><span>Boeing</span><span>Honeywell</span><span>GKN</span>
+            </div>
           </div>
         </div>
 
@@ -336,8 +475,8 @@
               <span class="timeline-location">Chennai, India</span>
             </div>
             <ul>
-              <li>Developed 3 Sidewalls Database Automation tools for Supplier Transition, reducing ARM/IRM creation time by 30%.</li>
-              <li>Conducted Value Stream Mapping for 787 Payloads with 14 Kaizen activities, achieving 7.8% reduction in total cycle time.</li>
+              <li>Developed 3 Sidewalls Database Automation tools for Supplier Transition, reducing ARM/IRM creation time by <strong>30%</strong>.</li>
+              <li>Conducted Value Stream Mapping for 787 Payloads with 14 Kaizen activities — <strong>7.8% cycle time reduction</strong>.</li>
             </ul>
           </div>
         </div>
@@ -352,9 +491,9 @@
               <span class="timeline-location">Pune, India</span>
             </div>
             <ul>
-              <li>Designed and validated 2 novel fully aluminum alloy chassis for electric ILCV trucks with up to 35% weight reduction.</li>
-              <li>Spearheaded material selection, weldability, formability, design, assembly and validation of chassis prototype.</li>
-              <li>Project selected for prototyping and advanced to New Product Development for Tata Motors Commercial Vehicles.</li>
+              <li>Designed and validated 2 fully aluminum alloy chassis for electric ILCV trucks — up to <strong>35% weight reduction</strong>.</li>
+              <li>Spearheaded material selection, weldability, formability, design, assembly and prototype validation.</li>
+              <li>Project selected for prototyping and <strong>advanced to New Product Development</strong> at Tata Motors Commercial Vehicles.</li>
             </ul>
           </div>
         </div>
@@ -369,9 +508,9 @@
               <span class="timeline-location">Vellore, India</span>
             </div>
             <ul>
-              <li>Directed a 25-member team to develop and deploy a fleet of 7 UAVs and ground robots.</li>
-              <li>Oversaw the full software lifecycle from algorithm development to on-robot deployment and field testing.</li>
-              <li>Implemented rigorous system integration testing to ensure reliability across multiple robotic platforms.</li>
+              <li>Directed a <strong>25-member engineering team</strong> to develop and deploy a fleet of <strong>7 UAVs and ground robots</strong>.</li>
+              <li>Oversaw full software lifecycle from algorithm development to on-robot deployment and field testing.</li>
+              <li>Implemented rigorous system integration testing ensuring reliability across multiple robotic platforms.</li>
             </ul>
           </div>
         </div>
@@ -394,10 +533,10 @@
             <p class="edu-date">Sep 2025 &ndash; Mar 2027</p>
             <p class="edu-courses">Robot Autonomy (Multi-Robot Systems) &middot; State Estimation &middot; Model Order Reduction</p>
             <div class="edu-honors">
-              <span>Narotam Sekhsaria Fellow '25</span>
-              <span>KC Mahindra Scholar '25</span>
-              <span>JITO JEAP Scholar '25</span>
               <span>NSF Scholar '25</span>
+              <span>KC Mahindra Scholar '25</span>
+              <span>Narotam Sekhsaria Fellow '25</span>
+              <span>JITO JEAP Scholar '25</span>
             </div>
           </div>
         </div>
@@ -468,7 +607,7 @@
           <div class="pub-info">
             <h3>Grain Boundary and Micro-Texture Evolution in GRCop Alloys</h3>
             <p class="pub-venue">Results in Engineering &mdash; Elsevier &middot; Impact Factor 7.9</p>
-            <p class="pub-desc">Study of microstructural evolution mechanisms in high-performance GRCop copper alloys for aerospace applications.</p>
+            <p class="pub-desc">Experimental study of microstructural evolution mechanisms in high-performance GRCop copper alloys for aerospace propulsion applications under thermomechanical deformation.</p>
             <span class="pub-date">Feb 2025</span>
           </div>
         </div>
@@ -476,8 +615,8 @@
           <div class="pub-badge journal">Journal</div>
           <div class="pub-info">
             <h3>Aerodynamic Tail Configuration Study</h3>
-            <p class="pub-venue">Peer-Reviewed Journal Publication &middot; 2025</p>
-            <p class="pub-desc">Aerodynamic assessment and comparative analysis of tail configurations for fixed-wing aircraft.</p>
+            <p class="pub-venue">Peer-Reviewed Journal &middot; 2025</p>
+            <p class="pub-desc">Comparative aerodynamic assessment and performance analysis of tail configurations for fixed-wing aircraft design.</p>
             <span class="pub-date">2025</span>
           </div>
         </div>
@@ -489,8 +628,8 @@
           <div class="pub-badge patent">Patent</div>
           <div class="pub-info">
             <h3>Wear Analysis Equipment for Marine Applications</h3>
-            <p class="pub-venue">Utility Patent &middot; Patent No. 202541056455</p>
-            <p class="pub-desc">Novel equipment design for analyzing wear patterns in marine vessel components.</p>
+            <p class="pub-venue">Utility Patent &middot; No. 202541056455</p>
+            <p class="pub-desc">Novel instrumentation for in-situ wear analysis of mechanical components in marine vessel environments.</p>
             <span class="pub-date">Jun 2025</span>
           </div>
         </div>
@@ -498,13 +637,12 @@
           <div class="pub-badge patent">Patent</div>
           <div class="pub-info">
             <h3>Electronic Spherical Steam Trap</h3>
-            <p class="pub-venue">Patent &middot; Patent No. 427140-001</p>
-            <p class="pub-desc">Electronic control mechanism for improved steam trap efficiency and reliability in industrial systems.</p>
+            <p class="pub-venue">Patent &middot; No. 427140-001</p>
+            <p class="pub-desc">Electronic control mechanism for improved steam trap efficiency and reliability in industrial process systems.</p>
             <span class="pub-date">Oct 2024</span>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -518,51 +656,50 @@
         <div class="achievement-card">
           <div class="achievement-icon fellowship">NS</div>
           <h3>Narotam Sekhsaria Foundation Fellow</h3>
-          <p>Prestigious Indian postgraduate fellowship for academic excellence</p>
+          <p>One of India's most prestigious postgraduate fellowships — awarded to exceptional students pursuing graduate studies at top global universities</p>
           <span class="achievement-date">Aug 2025</span>
         </div>
         <div class="achievement-card">
           <div class="achievement-icon fellowship">KCM</div>
           <h3>KC Mahindra Scholar</h3>
-          <p>Prestigious Indian postgraduate award for higher education abroad</p>
+          <p>National fellowship from the KC Mahindra Education Trust for outstanding students pursuing higher education at top universities abroad</p>
           <span class="achievement-date">Jul 2025</span>
         </div>
         <div class="achievement-card">
           <div class="achievement-icon fellowship">JITO</div>
           <h3>JITO JEAP Scholar</h3>
-          <p>Jain International Trade Organization fellowship for postgraduate studies</p>
+          <p>Jain International Trade Organization fellowship for exceptional postgraduate students studying at leading international institutions</p>
           <span class="achievement-date">Jun 2025</span>
         </div>
       </div>
 
-      <h3 class="subsection-title">Competitions</h3>
+      <h3 class="subsection-title">Competition Wins</h3>
       <div class="achievements-grid">
         <div class="achievement-card">
           <div class="achievement-icon trophy">1st</div>
           <h3>GKN Aerospace Sustainable Aviation Challenge</h3>
-          <p>INR 300,000 prize for autonomous eVTOL design and systems integration</p>
+          <p>National competition — <strong>INR 300,000 (≈$3,600) prize</strong> for autonomous eVTOL systems integration</p>
           <span class="achievement-date">Nov 2023</span>
         </div>
         <div class="achievement-card">
           <div class="achievement-icon trophy">1st</div>
           <h3>Forbes Marshall Technical Challenge</h3>
-          <p>Rank 1 among 200 participants for technical innovation</p>
+          <p>Ranked 1st among 200+ participants nationwide for technical innovation</p>
           <span class="achievement-date">Mar 2024</span>
         </div>
         <div class="achievement-card">
           <div class="achievement-icon medal">2nd</div>
           <h3>Honeywell Aerospace Ideathon</h3>
-          <p>INR 50,000 prize for aerospace innovation proposal</p>
+          <p>Runner-up nationally — <strong>INR 50,000 prize</strong> for aerospace systems innovation</p>
           <span class="achievement-date">Mar 2023</span>
         </div>
         <div class="achievement-card">
           <div class="achievement-icon medal">3rd</div>
           <h3>AIRBUS National Flight Challenge</h3>
-          <p>Safety systems &mdash; dynamic braking for inclined runways</p>
+          <p>Top 3 nationally for dynamic braking safety system for inclined runway operations</p>
           <span class="achievement-date">Feb 2024</span>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -571,8 +708,8 @@
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <div class="contact-content">
-        <p class="contact-lead">Seeking a <strong>summer 2026 research internship</strong> in robotics, autonomous systems, and AI &mdash; open to both industry R&amp;D labs and academic research roles.</p>
-        <p>If you're working on hard problems in autonomy, language-guided robotics, or robot learning, I'd love to connect.</p>
+        <p class="contact-lead">Seeking a <strong>summer 2026 research internship</strong> in robotics, autonomous systems, or AI &mdash; open to industry R&amp;D labs and academic research positions.</p>
+        <p>If you're working on hard problems in autonomy, language-guided robotics, or robot learning &mdash; let's talk.</p>
         <div class="contact-links">
           <a href="mailto:kothari1@stanford.edu" class="contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
@@ -587,13 +724,56 @@
             <span>GitHub</span>
           </a>
         </div>
+        <button class="ai-profile-btn" id="copyProfileBtn" onclick="copyAIProfile()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:13px;height:13px"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy AI-readable profile summary
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Hidden machine-readable profile for LLM agents -->
+  <div id="ai-profile-text" style="display:none" aria-hidden="true">
+NAME: Aditya Kothari
+ROLE: Graduate Researcher, Robotics & Autonomous Systems
+INSTITUTION: Stanford University — MS Aeronautics & Astronautics (Sep 2025–Mar 2027), GPA 4.0/4.0
+UNDERGRADUATE: Vellore Institute of Technology — BS Mechanical Engineering (Jul 2021–Jul 2025), GPA 4.0/4.0
+CONTACT: kothari1@stanford.edu | +1 (408) 688-8878
+LINKEDIN: linkedin.com/in/aditya-kothari-0904a4237
+GITHUB: github.com/kothari1
+
+CURRENT RESEARCH: Stanford Multi-Robot Systems Lab / MSL (Jan 2026–Present)
+- Semantic feature extraction layer for autonomous navigation using 3D Gaussian Splats + egocentric vision
+- Language-guided navigation tasks through sparse-feature world representation (sim-to-real)
+
+FELLOWSHIPS (all 2025, for graduate study at Stanford):
+- NSF Scholar 2025
+- KC Mahindra Scholar 2025
+- JITO JEAP Scholar 2025
+- Narotam Sekhsaria Foundation Fellow 2025
+
+KEY PROJECTS:
+1. LangDrive – Language-steered autonomous driving via VLMs (LLaVA-7B + CARLA); ~75% safe behavior rate
+2. Hierarchical RL – SAC+PPO decoupled policy for robotic manipulation (POMDP); 2x stack height vs baselines (27.18 vs 14.85)
+3. Autonomous Ground Robot – Full ROS2/C++ autonomy stack; EKF + particle filter + YOLO + A*-DWA planner
+4. MAVBE – Behavior-aware multi-object tracking (IMM-EKF + DeepSORT); 55% RMSE reduction, 68% fewer ID switches
+5. StarNav – GPS-free lunar localization via star pattern recognition; ~40 km accuracy
+
+INDUSTRY EXPERIENCE:
+- Boeing (May–Jul 2024): Python automation tools; 30% faster design release, 7.8% cycle time reduction
+- Tata Motors (Sep–Dec 2023): Electric truck chassis design; 35% weight reduction; selected for NPD
+- Team Veloce Captain (Apr 2022–May 2024): Led 25-person team, deployed 7 UAVs/robots
+
+PUBLICATIONS: Results in Engineering (Elsevier, JIF 7.9) – Feb 2025; Aerodynamic Tail Config Study – 2025
+PATENTS: Wear Analysis Equipment #202541056455 (2025); Electronic Spherical Steam Trap #427140-001 (2024)
+COMPETITION WINS: GKN Aerospace Rank 1 (INR 300K), Forbes Marshall Rank 1, Honeywell Rank 2, AIRBUS Rank 3
+SKILLS: ROS2, C++, Python, PyBullet, OpenCV, SLAM, EKF, RL (SAC/PPO), MPC, Gazebo, Docker, MATLAB, HPC
+LOOKING FOR: Summer 2026 internship in robotics / autonomous systems / AI
+TARGET COMPANIES: Archer, Skydio, Zipline, Wing, Wisk, Joby, Figure AI, Boston Dynamics, Waymo, NASA
+  </div>
+
   <footer>
-    <p>Designed &amp; Built by Aditya Kothari &nbsp;&middot;&nbsp; <a href="Aditya_Portfolio.pdf" target="_blank" style="color:var(--text-muted);text-decoration:none;">Portfolio PDF</a></p>
+    <p>Designed &amp; Built by Aditya Kothari &nbsp;&middot;&nbsp; <a href="Aditya_Portfolio.pdf" target="_blank">Portfolio PDF</a> &nbsp;&middot;&nbsp; <a href="Aditya_Kothari_Resume.pdf" target="_blank">Resume</a></p>
   </footer>
 
   <script src="assets/js/main.js"></script>

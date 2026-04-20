@@ -11,15 +11,15 @@ function resizeCanvas() {
 
 function createParticles() {
   particles = [];
-  const count = Math.floor((canvas.width * canvas.height) / 12000);
+  const count = Math.floor((canvas.width * canvas.height) / 14000);
   for (let i = 0; i < count; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      radius: Math.random() * 1.5 + 0.5,
-      opacity: Math.random() * 0.5 + 0.1,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      radius: Math.random() * 1.4 + 0.4,
+      opacity: Math.random() * 0.4 + 0.08,
     });
   }
 }
@@ -38,20 +38,19 @@ function drawParticles() {
 
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(0, 212, 255, ${p.opacity})`;
+    ctx.fillStyle = `rgba(245, 158, 11, ${p.opacity})`;
     ctx.fill();
 
-    // Draw connections
     for (let j = i + 1; j < particles.length; j++) {
       const dx = p.x - particles[j].x;
       const dy = p.y - particles[j].y;
       const dist = Math.sqrt(dx * dx + dy * dy);
 
-      if (dist < 120) {
+      if (dist < 110) {
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(0, 212, 255, ${0.06 * (1 - dist / 120)})`;
+        ctx.strokeStyle = `rgba(245, 158, 11, ${0.05 * (1 - dist / 110)})`;
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
@@ -72,16 +71,13 @@ window.addEventListener('resize', () => {
 
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
-  if (currentScroll > 50) {
+  if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-  lastScroll = currentScroll;
 });
 
 // ===== Mobile Nav Toggle =====
@@ -93,7 +89,6 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('active');
 });
 
-// Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
@@ -103,8 +98,8 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // ===== Scroll Animations =====
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.08,
+  rootMargin: '0px 0px -40px 0px',
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -115,15 +110,14 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Add fade-in class to animatable elements
 document.querySelectorAll(
-  '.project-card, .timeline-item, .edu-card, .skill-category, .achievement-card, .highlight-card, .research-current, .research-areas, .pub-card, .contact-content'
+  '.project-card, .timeline-item, .edu-card, .skill-category, .achievement-card, .highlight-card, .research-current, .research-areas, .pub-card, .spotlight-card, .contact-content'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
 
-// ===== Smooth Scroll for Navigation =====
+// ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -155,3 +149,35 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ===== AI Profile Copy =====
+function copyAIProfile() {
+  const profileDiv = document.getElementById('ai-profile-text');
+  const text = profileDiv.innerText || profileDiv.textContent;
+  const btn = document.getElementById('copyProfileBtn');
+
+  navigator.clipboard.writeText(text).then(() => {
+    btn.classList.add('copied');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px"><polyline points="20 6 9 17 4 12"/></svg> Copied to clipboard!`;
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77"/><circle cx="12" cy="12" r="3"/></svg> Copy AI-readable profile summary`;
+    }, 2500);
+  }).catch(() => {
+    // Fallback for older browsers
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    btn.classList.add('copied');
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77"/><circle cx="12" cy="12" r="3"/></svg> Copy AI-readable profile summary`;
+    }, 2500);
+  });
+}
