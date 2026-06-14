@@ -19,7 +19,7 @@
   --stanford-red: #8C1515;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --max-width: 1100px;
+  --max-width: 1600px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
+  font-size: 17px;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.7;
-  font-size: 17px;
+  font-size: 1rem;
   overflow-x: hidden;
 }
 
@@ -72,7 +73,7 @@ body {
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -167,26 +168,40 @@ body {
 
 /* ===== Hero Section ===== */
 #hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
   z-index: 1;
-  padding-top: 5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   background: linear-gradient(160deg, #fff 0%, #fdf4f4 45%, #f9fafb 100%);
 }
 
 .hero-main {
-  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  align-items: flex-start;
+  gap: 2.5rem;
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 2rem 2rem;
+  padding: 2rem 0;
+}
+
+.hero-left {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .hero-text { flex: 1; }
@@ -199,7 +214,7 @@ body {
 }
 
 .hero-name {
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
   font-weight: 800;
   line-height: 1.08;
   margin-bottom: 0.55rem;
@@ -223,7 +238,7 @@ body {
 
 /* Stanford badge in hero */
 .stanford-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0.75rem;
   background: #fff;
@@ -233,6 +248,7 @@ body {
   margin-bottom: 1rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .stanford-badge:hover {
@@ -241,7 +257,7 @@ body {
 }
 
 .stanford-badge-logo {
-  height: 36px;
+  height: 46px;
   width: auto;
   flex-shrink: 0;
 }
@@ -249,24 +265,25 @@ body {
 .stanford-info {
   display: flex;
   flex-direction: column;
-  line-height: 1.25;
+  gap: 0.1rem;
+  line-height: 1.2;
 }
 
 .stanford-university {
-  font-size: 0.88rem;
+  font-size: 1.06rem;
   font-weight: 700;
   color: var(--stanford-red);
 }
 
 .stanford-dept {
-  font-size: 0.75rem;
+  font-size: 0.98rem;
   color: #a0522d;
   font-family: var(--font-mono);
 }
 
 .hero-credentials {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.4rem;
   margin-bottom: 1.75rem;
 }
@@ -285,8 +302,8 @@ body {
 /* Buttons */
 .hero-cta {
   display: flex;
-  gap: 0.85rem;
-  flex-wrap: wrap;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
 }
 
 .btn {
@@ -332,8 +349,8 @@ body {
 .hero-image { flex-shrink: 0; }
 
 .image-frame {
-  width: 270px;
-  height: 310px;
+  width: 216px;
+  height: 248px;
   border-radius: 16px;
   overflow: hidden;
   border: 3px solid #fff;
@@ -353,83 +370,102 @@ body {
   object-position: center top;
 }
 
-/* ===== Hero Spotlight tiles (visible in first viewport) ===== */
-.hero-spotlight {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--border);
-  background: #fff;
+/* Hero right — summary cards */
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-self: stretch;
 }
 
-.spotlight-card {
+.hero-summary-card {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  padding: 1.35rem 1.5rem;
+  gap: 0.85rem;
+  padding: 0.5rem 2.4rem 0.5rem 1.1rem;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
   text-decoration: none;
-  color: inherit;
-  border-right: 1px solid var(--border);
   transition: var(--transition);
+  box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
 }
 
-.spotlight-card:last-child { border-right: none; }
-
-.spotlight-card::before {
+/* Left accent bar that grows in on hover */
+.hero-summary-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
+  top: 0; bottom: 0; left: 0;
+  width: 3px;
   background: var(--accent);
-  transform: scaleX(0);
+  transform: scaleY(0);
+  transition: transform 0.25s ease;
+  transform-origin: top;
+}
+
+/* Persistent (muted) arrow that signals the card is clickable */
+.hero-summary-card::after {
+  content: '→';
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  opacity: 0.45;
   transition: var(--transition);
 }
 
-.spotlight-card:hover {
-  background: #fdf4f4;
+.hero-summary-card:hover {
+  border-color: rgba(140, 21, 21, 0.35);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
-.spotlight-card:hover::before {
-  transform: scaleX(1);
+.hero-summary-card:hover::before { transform: scaleY(1); }
+
+.hero-summary-card:hover::after {
+  color: var(--accent);
+  opacity: 1;
+  right: 0.85rem;
 }
 
-.spotlight-icon {
-  font-size: 1.75rem;
+.hero-summary-card:hover .summary-icon { transform: scale(1.12); }
+
+.summary-icon {
+  font-size: 1.55rem;
   flex-shrink: 0;
   line-height: 1;
+  transition: transform var(--transition);
 }
 
-.spotlight-text {
+.summary-text {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.15rem;
 }
 
-.spotlight-title {
-  font-size: 0.97rem;
-  font-weight: 700;
+.summary-title {
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1.3;
 }
 
-.spotlight-desc {
-  font-size: 0.8rem;
+.summary-desc {
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.4;
   font-family: var(--font-mono);
-}
-
-/* Scroll indicator */
-.scroll-indicator {
-  display: none; /* tiles serve as the visual bottom anchor */
+  line-height: 1.4;
 }
 
 /* ===== Sections ===== */
 .section {
-  padding: 4.5rem 2rem;
+  padding: 4.5rem 0.5rem;
   position: relative;
   z-index: 1;
 }
@@ -444,7 +480,7 @@ body {
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 1.85rem;
   font-weight: 800;
   margin-bottom: 2.25rem;
   letter-spacing: -0.02em;
@@ -810,32 +846,6 @@ ul.project-desc li::before {
   border: 1px solid rgba(140,21,21,0.15);
 }
 
-.project-companies {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem;
-  padding-top: 0.65rem;
-  border-top: 1px solid var(--border);
-  margin-top: auto;
-}
-
-.companies-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  white-space: nowrap;
-}
-
-.project-companies span:not(.companies-label) {
-  font-size: 0.72rem;
-  padding: 0.18rem 0.55rem;
-  border-radius: 4px;
-  background: rgba(30,64,175,0.06);
-  color: var(--accent-secondary);
-  border: 1px solid rgba(30,64,175,0.15);
-  font-family: var(--font-mono);
-}
 
 .project-link { margin-top: 0.6rem; }
 
@@ -1377,22 +1387,43 @@ footer a:hover { color: var(--accent); }
 }
 
 @media (max-width: 768px) {
-  body { font-size: 16px; }
+  body { font-size: 17px; }
 
   .hero-main {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 1.75rem;
-    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
   }
 
-  .hero-cta { justify-content: center; }
-  .stanford-badge { display: inline-flex; }
-  .hero-credentials { justify-content: center; }
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-intro {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .stanford-badge,
+  .hero-credentials,
+  .hero-cta {
+    align-self: center;
+  }
+
+  .hero-right {
+    align-self: auto;
+    width: 100%;
+  }
+
+  .hero-cta { justify-content: center; flex-wrap: wrap; }
+  .stanford-badge { white-space: normal; }
+  .stanford-info { align-items: center; }
+  .hero-credentials { justify-content: center; flex-wrap: wrap; }
 
   .image-frame {
-    width: 200px;
-    height: 240px;
+    width: 180px;
+    height: 210px;
   }
 
   .nav-links {
@@ -1431,14 +1462,6 @@ footer a:hover { color: var(--accent); }
 }
 
 @media (max-width: 520px) {
-  .hero-spotlight { grid-template-columns: 1fr; }
-
-  .spotlight-card {
-    border-right: none !important;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .spotlight-card:last-child { border-bottom: none; }
   .achievements-grid { grid-template-columns: 1fr; }
   .about-highlights { grid-template-columns: 1fr 1fr; }
 }
