@@ -19,7 +19,7 @@
   --stanford-red: #8C1515;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --max-width: 1100px;
+  --max-width: 1280px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -167,7 +167,7 @@ body {
 
 /* ===== Hero Section ===== */
 #hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -334,7 +334,7 @@ body {
 /* ===== Hero Spotlight tiles (visible in first viewport) ===== */
 .hero-spotlight {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--border);
   background: #fff;
 }
@@ -408,7 +408,7 @@ body {
 
 /* ===== Sections ===== */
 .section {
-  padding: 4.5rem 2rem;
+  padding: 3.25rem 2rem;
   position: relative;
   z-index: 1;
 }
@@ -995,6 +995,7 @@ ul.project-desc li::before {
 
 /* ===== Publications ===== */
 .publications-list {
+  /* .two-col halves the height of the honors lists */
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
@@ -1042,6 +1043,18 @@ ul.project-desc li::before {
   background: rgba(30,64,175,0.08);
   color: var(--accent-secondary);
   border: 1px solid rgba(30,64,175,0.2);
+}
+
+.pub-badge.award {
+  background: rgba(140,21,21,0.08);
+  color: var(--accent);
+  border: 1px solid rgba(140,21,21,0.2);
+}
+
+.pub-badge.rank {
+  background: rgba(180,120,10,0.10);
+  color: #8a5a00;
+  border: 1px solid rgba(180,120,10,0.25);
 }
 
 .pub-info h3 {
@@ -1277,4 +1290,14 @@ footer a:hover { color: var(--accent); }
   }
 
   .spotlight-card:last-child { border-bottom: none; }
+}
+
+.publications-list.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .publications-list.two-col { grid-template-columns: 1fr; }
 }
