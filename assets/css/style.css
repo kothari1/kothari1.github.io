@@ -191,12 +191,6 @@ body {
 
 .hero-text { flex: 1; }
 
-.hero-greeting {
-  font-family: var(--font-mono);
-  color: var(--accent);
-  font-size: 1rem;
-  margin-bottom: 0.55rem;
-}
 
 .hero-name {
   font-size: clamp(2.6rem, 5vw, 4.2rem);
@@ -264,23 +258,7 @@ body {
   font-family: var(--font-mono);
 }
 
-.hero-credentials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.75rem;
-}
 
-.hero-credential-badge {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  padding: 0.28rem 0.75rem;
-  border-radius: 20px;
-  background: #fff;
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-}
 
 /* Buttons */
 .hero-cta {
@@ -588,42 +566,10 @@ body {
 }
 
 /* Stats / highlight cards */
-.about-highlights {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
-}
 
-.highlight-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.35rem;
-  text-align: center;
-  transition: var(--transition);
-  box-shadow: var(--shadow-sm);
-}
 
-.highlight-card:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
 
-.highlight-number {
-  display: block;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--accent);
-  font-family: var(--font-mono);
-}
 
-.highlight-label {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
 /* ===== Projects ===== */
 .projects-grid {
@@ -685,9 +631,6 @@ body {
 .pv-robot  { background: linear-gradient(135deg, #1a1208 0%, #332200 100%); }
 .pv-vision { background: linear-gradient(135deg, #050e20 0%, #0d2045 100%); }
 .pv-space  { background: linear-gradient(135deg, #04040e 0%, #080830 100%); }
-.pv-flight { background: linear-gradient(135deg, #200d00 0%, #3d1c00 100%); }
-.pv-aircraft { background: linear-gradient(135deg, #160e04 0%, #2c1c08 100%); }
-.pv-safety { background: linear-gradient(135deg, #081420 0%, #0d2538 100%); }
 
 .pv-space::before {
   content: '';
@@ -969,12 +912,6 @@ ul.project-desc li::before {
   font-size: 0.93rem;
 }
 
-.edu-gpa {
-  font-family: var(--font-mono);
-  color: var(--accent);
-  font-size: 0.88rem;
-  font-weight: 600;
-}
 
 .edu-date {
   font-size: 0.82rem;
@@ -1121,12 +1058,6 @@ ul.project-desc li::before {
   margin-bottom: 0.25rem;
 }
 
-.pub-desc {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.35rem;
-  line-height: 1.65;
-}
 
 .pub-date {
   font-size: 0.77rem;
@@ -1135,40 +1066,9 @@ ul.project-desc li::before {
 }
 
 /* ===== Achievements ===== */
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
-  gap: 1.1rem;
-}
 
-.achievement-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: var(--transition);
-  box-shadow: var(--shadow-sm);
-}
 
-.achievement-card:hover {
-  border-color: rgba(140,21,21,0.3);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-3px);
-}
 
-.achievement-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 0.95rem;
-  margin-bottom: 0.85rem;
-}
 
 .subsection-title {
   font-size: 1rem;
@@ -1182,45 +1082,9 @@ ul.project-desc li::before {
 
 .subsection-title:first-of-type { margin-top: 0; }
 
-.achievement-icon.fellowship {
-  background: rgba(22,163,74,0.1);
-  color: #16a34a;
-  border: 2px solid rgba(22,163,74,0.25);
-  font-size: 0.72rem;
-}
 
-.achievement-icon.trophy {
-  background: rgba(140,21,21,0.1);
-  color: var(--accent);
-  border: 2px solid rgba(140,21,21,0.25);
-}
 
-.achievement-icon.medal {
-  background: rgba(30,64,175,0.08);
-  color: var(--accent-secondary);
-  border: 2px solid rgba(30,64,175,0.2);
-}
 
-.achievement-card h3 {
-  font-size: 0.97rem;
-  font-weight: 700;
-  margin-bottom: 0.45rem;
-  line-height: 1.35;
-  color: var(--text-primary);
-}
-
-.achievement-card p {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.65rem;
-  line-height: 1.55;
-}
-
-.achievement-date {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-}
 
 /* ===== Contact ===== */
 .contact-content {
@@ -1364,7 +1228,6 @@ footer a:hover { color: var(--accent); }
 
   .hero-cta { justify-content: center; }
   .stanford-badge { display: inline-flex; }
-  .hero-credentials { justify-content: center; }
 
   .image-frame {
     width: 200px;
@@ -1400,7 +1263,6 @@ footer a:hover { color: var(--accent); }
   }
 
   .edu-honors { justify-content: center; }
-  .achievements-grid { grid-template-columns: 1fr 1fr; }
   .contact-links { flex-direction: column; align-items: center; }
 
   .section { padding: 3rem 1.25rem; }
@@ -1415,6 +1277,4 @@ footer a:hover { color: var(--accent); }
   }
 
   .spotlight-card:last-child { border-bottom: none; }
-  .achievements-grid { grid-template-columns: 1fr; }
-  .about-highlights { grid-template-columns: 1fr 1fr; }
 }
