@@ -396,6 +396,7 @@ body {
   transform: scaleX(1);
 }
 
+.spotlight-icon svg { width: 24px; height: 24px; color: var(--accent); }
 .spotlight-icon {
   font-size: 1.75rem;
   flex-shrink: 0;
@@ -794,6 +795,7 @@ ul.project-desc li::before {
 }
 
 .project-tags {
+  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -810,32 +812,6 @@ ul.project-desc li::before {
   border: 1px solid rgba(140,21,21,0.15);
 }
 
-.project-companies {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem;
-  padding-top: 0.65rem;
-  border-top: 1px solid var(--border);
-  margin-top: auto;
-}
-
-.companies-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  white-space: nowrap;
-}
-
-.project-companies span:not(.companies-label) {
-  font-size: 0.72rem;
-  padding: 0.18rem 0.55rem;
-  border-radius: 4px;
-  background: rgba(30,64,175,0.06);
-  color: var(--accent-secondary);
-  border: 1px solid rgba(30,64,175,0.15);
-  font-family: var(--font-mono);
-}
 
 .project-link { margin-top: 0.6rem; }
 
