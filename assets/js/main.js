@@ -150,10 +150,49 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// ===== AI Profile text (kept in JS, not in the DOM, so it is not hidden page text) =====
+const AI_PROFILE = `
+NAME: Aditya Kothari
+ROLE: Graduate Researcher, Robotics & Autonomous Systems
+INSTITUTION: Stanford University, MS Aeronautics & Astronautics (Sep 2025–Mar 2027), GPA 4.0/4.0
+UNDERGRADUATE: Vellore Institute of Technology, BS Mechanical Engineering (Jul 2021–Jul 2025), GPA 4.0/4.0
+CONTACT: kothari1@stanford.edu | +1 (408) 688-8878
+LINKEDIN: linkedin.com/in/aditya-kothari-0904a4237
+GITHUB: github.com/kothari1
+
+CURRENT RESEARCH: Stanford Multi-Robot Systems Lab / MSL (Jan 2026–Present), advisor Prof. Mac Schwager
+- AORA: agentic orchestrator for closed-loop autonomous VLA policy training; cloud-deployed agentic "Forge" with full sim-to-real onto a Unitree G1 humanoid
+- System-2 visuomotor policies for language-guided drone navigation, trained in 3D Gaussian Splat simulation
+
+FELLOWSHIPS (all 2025, for graduate study at Stanford):
+- KC Mahindra Scholar 2025
+- JITO JEAP Scholar 2025
+- Narotam Sekhsaria Foundation Fellow 2025
+
+KEY PROJECTS:
+1. V-LEAD – RGB-only visuomotor drone navigation in 3D Gaussian Splats (github.com/kothari1/V-LEAD); ResNet-18 + frozen Depth Anything V2 cross-attention + GRU, 10-step velocity horizon at 20 Hz; MPC distillation via BC -> DAgger -> online RL; goal success 14-52% -> 75-97%, collisions 33% -> 5%; residual TD3+BC the only method to beat the imitation seed on an unseen goal object (65.1% vs 62.4%)
+2. MAVBE – Behavior-aware multi-object tracking (IMM-EKF + DeepSORT); 55% RMSE reduction, 68% fewer ID switches
+3. StarNav – GPS-free lunar localization via star pattern recognition (github.com/kothari1/StarNav); ~40 km accuracy, 99.7% search-space reduction
+4. Hierarchical RL – SAC+PPO decoupled policy for robotic manipulation (POMDP); 2x stack height vs baselines (27.18 vs 14.85)
+5. Autonomous Ground Robot – Full ROS2/C++ autonomy stack; EKF + particle filter + YOLO + A*-DWA planner
+
+INDUSTRY EXPERIENCE:
+- Archer Aviation (Jun–Aug 2026), Autonomy Intern: multi-agent planning pipeline for city-scale probabilistic search, shipped into production autonomy stack; Spectral Multi-Scale Coverage planner, >96% joint search optimality for 100-drone swarms at <5s cycle times; first real-world hexacopter flight tests of the Archer autonomy stack
+- Boeing (May–Jul 2024): Python automation tools; 30% faster design release, 7.8% cycle time reduction
+- Tata Motors (Sep–Dec 2023): Electric truck chassis design; 35% weight reduction; selected for NPD
+- Team Veloce Captain (Apr 2022–May 2024): Led 25-person team, deployed 7 UAVs/robots
+
+PUBLICATIONS: Results in Engineering (Elsevier) – Feb 2025; Aerodynamic Tail Config Study – 2025
+PATENTS: Wear Analysis Equipment #202541056455 (2025); Electronic Spherical Steam Trap #427140-001 (2024)
+COMPETITION WINS: GKN Aerospace Rank 1 (INR 300K), Forbes Marshall Rank 1, Honeywell Rank 2, AIRBUS Rank 3
+SKILLS: VLAs, visuomotor policies, foundation models, VLMs, knowledge distillation, imitation learning (BC/DAgger), reinforcement learning (TD3+BC, SAC, PPO), transformers/cross-attention, PyTorch, sim2real, 3D Gaussian Splatting, monocular depth estimation, visual localization, SLAM, sensor fusion (LiDAR/RGB-D/Vision), detection and multi-object tracking (YOLO, DeepSORT), agentic orchestrators, multi-agent swarm planning, optimal control/MPC, state estimation (EKF/IMM, particle filter), GPS-denied navigation, path planning (A*, Theta*, DWA), Python, C++, ROS2, NumPy, Docker, Git, Linux, MuJoCo, CARLA, Gazebo
+GRADUATING: March 2027
+SEEKING: Full-time roles in robotics, autonomy, computer vision, and machine learning (start 2027)
+`.trim();
+
 // ===== AI Profile Copy =====
 function copyAIProfile() {
-  const profileDiv = document.getElementById('ai-profile-text');
-  const text = profileDiv.innerText || profileDiv.textContent;
+  const text = AI_PROFILE;
   const btn = document.getElementById('copyProfileBtn');
 
   navigator.clipboard.writeText(text).then(() => {

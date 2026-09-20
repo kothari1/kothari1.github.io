@@ -1301,3 +1301,13 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 768px) {
   .publications-list.two-col { grid-template-columns: 1fr; }
 }
+
+/* Project cards that show a real result figure instead of an icon */
+.project-visual.figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-visual.figure::after { display: none; }
