@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya Kothari | Robotics &amp; Autonomy — Stanford</title>
-  <meta name="description" content="Aditya Kothari — Stanford MS Aeronautics &amp; Astronautics, Multi-Robot Systems Lab. Visuomotor policies, robot learning, and perception for autonomy. Previously autonomy intern at Archer Aviation. Graduating March 2027." />
+  <title>Aditya Kothari | Robotics &amp; Autonomy at Stanford</title>
+  <meta name="description" content="Aditya Kothari. Stanford MS Aeronautics &amp; Astronautics, Multi-Robot Systems Lab. Visuomotor policies, robot learning, and perception for autonomy. Previously autonomy intern at Archer Aviation. Graduating March 2027." />
 
   <!-- JSON-LD structured data for LLM/AI agents -->
   <script type="application/ld+json">
@@ -71,7 +71,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section — spotlight tiles at bottom are visible without scrolling -->
+  <!-- Hero Section: spotlight tiles at bottom are visible without scrolling -->
   <section id="hero">
     <div class="hero-main">
       <div class="hero-text">
@@ -144,12 +144,12 @@
 
           <div class="research-current">
             <div class="research-current-header">
-              <span class="research-label">Current Research &mdash; Stanford MSL</span>
-              <span class="research-status">&#9679; Active &mdash; since Jan 2026</span>
+              <span class="research-label">Current Research at Stanford MSL</span>
+              <span class="research-status">&#9679; Active since Jan 2026</span>
             </div>
             <h3>AORA: Closing the Loop on Autonomous Policy Training</h3>
             <span class="timeline-company">Stanford Multi-Robot Systems Lab &nbsp;&middot;&nbsp; Advisor: Prof. Mac Schwager</span>
-            <p>Leading development of <strong>AORA</strong>, an agentic orchestrator that turns policy training into a closed self-improvement loop: it provisions cloud compute, trains and evaluates robot policies through an agentic &ldquo;Forge,&rdquo; and feeds failures back into the next round without a human in the loop. Alongside it I design system-2 visuomotor policies for language-guided drone navigation, trained entirely in 3D Gaussian Splat simulation with sim-to-real transfer &mdash; removing the 60+ hours of manual flying such policies would otherwise require.</p>
+            <p>Leading development of <strong>AORA</strong>, an agentic orchestrator that turns policy training into a closed self-improvement loop: it provisions cloud compute, trains and evaluates <strong>vision-language-action (VLA)</strong> policies through an agentic &ldquo;Forge,&rdquo; and feeds failures back into the next round without a human supervising, with full sim-to-real onto a <strong>Unitree G1</strong> humanoid. Alongside it I design system-2 visuomotor policies for language-guided drone navigation, trained entirely in 3D Gaussian Splat simulation, removing the 60+ hours of manual flying such policies would otherwise require.</p>
             <div class="research-tags-strip">
               <span>Agentic Orchestration</span>
               <span>Visuomotor Policies</span>
@@ -193,11 +193,11 @@
               <span class="project-date">Jun 2026</span>
             </div>
             <h3 class="project-title">V-LEAD: Vision-Only Drone Navigation in Gaussian Splats</h3>
-            <p class="project-plain-desc">A quadrotor that flies to a goal through cluttered space using nothing but a forward camera &mdash; no map, no depth sensor, no full state estimate.</p>
+            <p class="project-plain-desc">A quadrotor that flies to a goal through cluttered space using nothing but a forward camera. No map, no depth sensor, no full state estimate.</p>
             <ul class="project-desc">
               <li>Distilled a privileged <strong>MPC</strong> expert into an <strong>RGB-only visuomotor policy</strong>: ResNet-18 fused with a frozen <strong>Depth Anything V2</strong> branch via cross-attention, a GRU for temporal context, and a 10-step velocity-command horizon at 20&nbsp;Hz</li>
               <li>Trained by <strong>behavior cloning</strong>, corrected with <strong>DAgger</strong> using an MPC re-solve oracle, then pushed past the demonstrator with <strong>online RL</strong> (SAC, PPO, residual TD3+BC)</li>
-              <li>Built the simulator integration, expert-data pipeline, deployment wrapper, and the full offline-to-online RL stack &mdash; including the frozen-backbone residual actor, critic warmup, and BC anchor needed to stop RL from erasing the imitation seed</li>
+              <li>Built the simulator integration, expert-data pipeline, deployment wrapper, and the full offline-to-online RL stack, including the frozen-backbone residual actor, critic warmup, and BC anchor needed to stop RL from erasing the imitation seed</li>
             </ul>
             <div class="project-outcome">
               <strong>Key Outcome:</strong> Goal success rose from <span class="project-metric">14&ndash;52%</span> to <span class="project-metric">75&ndash;97%</span> across the pipeline while collisions fell <span class="project-metric">33% &rarr; 5%</span>. On a goal object held out of training entirely, residual TD3+BC was the only method to improve on the imitation seed (<span class="project-metric">65.1% vs 62.4%</span>) where on-policy PPO regressed to 40%.
@@ -253,38 +253,12 @@
               <li>Expanded triangle signatures from <strong>20 to 364</strong>, reducing search space from <strong>38M km&sup2; to 126k km&sup2;</strong></li>
             </ul>
             <div class="project-outcome">
-              <strong>Key Outcome:</strong> <span class="project-metric">~40 km localization accuracy</span> from sky imagery alone &mdash; no GPS, no ground beacons, no surface landmarks.
+              <strong>Key Outcome:</strong> <span class="project-metric">~40 km localization accuracy</span> from sky imagery alone. No GPS, no ground beacons, no surface landmarks.
             </div>
             <div class="project-tags">
               <span>Particle Filter</span><span>Astropy</span><span>OpenCV</span><span>NumPy</span><span>Localization</span>
             </div>
             <div class="project-link"><a href="https://github.com/kothari1/StarNav" target="_blank">View on GitHub &rarr;</a></div>
-          </div>
-        </div>
-
-        <!-- LangDrive -->
-        <div class="project-card featured">
-          <div class="project-visual pv-ai">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <div class="project-body">
-            <div class="project-header">
-              <span class="project-type-badge">Vision-Language &middot; Autonomous Driving</span>
-              <span class="project-date">Dec 2025</span>
-            </div>
-            <h3 class="project-title">LangDrive: Language-Steered Autonomous Driving via VLMs</h3>
-            <p class="project-plain-desc">A hierarchical autonomy stack that interprets natural language commands to drive safely in complex urban environments.</p>
-            <ul class="project-desc">
-              <li>Developed a hierarchical autonomy stack integrating <strong>Vision-Language Models (VLMs)</strong> for high-level semantic decision-making in the <strong>CARLA</strong> simulator</li>
-              <li>Natural language interface via <strong>LLaVA-7B VLM</strong> + RGB camera feed for safety-constrained reasoning and temporal maneuver execution</li>
-              <li>Control bridge translating VLM outputs into low-level steering and throttle commands — validated across urban driving scenarios</li>
-            </ul>
-            <div class="project-outcome">
-              <strong>Key Outcome:</strong> A closed &ldquo;see, decide, act&rdquo; loop driven <span class="project-metric">entirely by natural-language prompts</span>, with no rule-based behaviour layer &mdash; safe in roughly <span class="project-metric">3 of 4</span> urban scenarios. The failures were instructive: a frozen VLM reasons well about scenes but has no notion of vehicle dynamics, which is what pushed me toward learned visuomotor control.
-            </div>
-            <div class="project-tags">
-              <span>VLMs</span><span>CARLA</span><span>LLaVA-7B</span><span>Gen-AI</span><span>Python</span>
-            </div>
           </div>
         </div>
 
@@ -301,7 +275,7 @@
             <h3 class="project-title">Hierarchical RL for Robust Robotic Control under Uncertainty</h3>
             <p class="project-plain-desc">A decoupled policy architecture for long-horizon manipulation that remains stable under significant perception noise.</p>
             <ul class="project-desc">
-              <li>Decoupled policy stack: <strong>Soft Actor-Critic (SAC)</strong> for high-level goal selection, <strong>PPO</strong> for low-level force control — outperforms monolithic methods by 5x on long-horizon tasks</li>
+              <li>Decoupled policy stack: <strong>Soft Actor-Critic (SAC)</strong> for high-level goal selection, <strong>PPO</strong> for low-level force control, outperforming monolithic methods by 5x on long-horizon tasks</li>
               <li>Modeled as a <strong>POMDP</strong> to handle observation noise up to <strong>40% object half-length</strong>, mitigating compounding errors</li>
               <li>Custom dense reward function with stability heuristics and multi-stage curriculum for robust <strong>sim-to-real transfer</strong></li>
             </ul>
@@ -329,10 +303,10 @@
             <ul class="project-desc">
               <li>Modular autonomy stack in <strong>ROS2/C++</strong>: sensor fusion via <strong>EKF</strong> and global localization via Particle Filter (MCL)</li>
               <li><strong>YOLO-based perception</strong> integrated with Occupancy Grid Mapping to inform a hybrid planner (<strong>A* global + DWA local</strong>)</li>
-              <li>Trajectory tracking controller minimizing cross-track error — validated through real-world and simulation testing</li>
+              <li>Trajectory tracking controller minimizing cross-track error, validated through real-world and simulation testing</li>
             </ul>
             <div class="project-outcome">
-              <strong>Key Outcome:</strong> Full autonomous navigation validated in dynamic environments — robust sensor fusion, perception, and hybrid path planning integrated end-to-end.
+              <strong>Key Outcome:</strong> Full autonomous navigation validated in dynamic environments, with robust sensor fusion, perception, and hybrid path planning integrated end-to-end.
             </div>
             <div class="project-tags">
               <span>ROS2</span><span>C++</span><span>Gazebo</span><span>EKF</span><span>SLAM</span><span>YOLO</span>
@@ -361,7 +335,7 @@
             </div>
             <ul>
               <li>Architected an aerial imagery-based multi-agent planning pipeline for <strong>city-scale probabilistic search</strong>, deployed into Archer's production autonomy stack.</li>
-              <li>Built a Spectral Multi-Scale Coverage (SMC) planner guaranteeing swarm-level deconfliction at high speed — <strong>&gt;96% joint search optimality</strong> for <strong>100-drone swarms</strong> at <strong>&lt;5s</strong> cycle times.</li>
+              <li>Built a Spectral Multi-Scale Coverage (SMC) planner guaranteeing swarm-level deconfliction at high speed: <strong>&gt;96% joint search optimality</strong> for <strong>100-drone swarms</strong> at <strong>&lt;5s</strong> cycle times.</li>
               <li>Ran the first real-world flight tests and validation of the Archer autonomy stack on hexacopter platforms.</li>
             </ul>
           </div>
@@ -377,7 +351,7 @@
               <span class="timeline-location">Stanford, CA</span>
             </div>
             <ul>
-              <li>Leading <strong>AORA</strong>, an agentic orchestrator for closed-loop autonomous policy training, and designing visuomotor policies for language-guided drone navigation &mdash; see <a href="#research">Research</a>.</li>
+              <li>Leading <strong>AORA</strong>, an agentic orchestrator for closed-loop autonomous policy training, and designing visuomotor policies for language-guided drone navigation. See <a href="#research">Research</a>.</li>
             </ul>
           </div>
         </div>
@@ -386,13 +360,13 @@
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>Engineering Intern &mdash; Software Tools</h3>
+              <h3>Engineering Intern, Software Tools</h3>
               <span class="timeline-company">Boeing</span>
               <span class="timeline-date">May 2024 &ndash; Jul 2024</span>
               <span class="timeline-location">Chennai, India</span>
             </div>
             <ul>
-              <li>Built Python automation tooling for 787 payloads supplier transition &mdash; <strong>30%</strong> faster design release, <strong>7.8%</strong> cycle-time reduction.</li>
+              <li>Built Python automation tooling for 787 payloads supplier transition: <strong>30%</strong> faster design release, <strong>7.8%</strong> cycle-time reduction.</li>
             </ul>
           </div>
         </div>
@@ -407,7 +381,7 @@
               <span class="timeline-location">Pune, India</span>
             </div>
             <ul>
-              <li>Designed and validated aluminium chassis for electric ILCV trucks &mdash; up to <strong>35% weight reduction</strong>; selected for prototyping and <strong>advanced to New Product Development</strong>.</li>
+              <li>Designed and validated aluminium chassis for electric ILCV trucks, up to <strong>35% weight reduction</strong>; selected for prototyping and <strong>advanced to New Product Development</strong>.</li>
             </ul>
           </div>
         </div>
@@ -417,7 +391,7 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <h3>Team Captain &amp; Technical Lead</h3>
-              <span class="timeline-company">Team Veloce &mdash; University UAV &amp; Robotics Team</span>
+              <span class="timeline-company">Team Veloce, University UAV &amp; Robotics Team</span>
               <span class="timeline-date">Apr 2022 &ndash; May 2024</span>
               <span class="timeline-location">Vellore, India</span>
             </div>
@@ -438,35 +412,39 @@
       <h2 class="section-title"><span class="title-number">04.</span> Skills</h2>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>Robot Learning</h3>
+          <h3>Deep Learning</h3>
           <div class="skill-tags">
-            <span>Visuomotor Policies</span><span>Imitation Learning (BC, DAgger)</span>
-            <span>Reinforcement Learning (SAC, PPO, TD3+BC)</span><span>Sim-to-Real</span>
-            <span>Vision-Language Models</span>
+            <span>VLAs</span><span>Visuomotor Policies</span><span>Foundation Models</span>
+            <span>VLMs</span><span>Knowledge Distillation</span>
+            <span>Imitation Learning (BC, DAgger)</span>
+            <span>Reinforcement Learning (TD3+BC, SAC, PPO)</span>
+            <span>Transformers / Cross-Attention</span><span>PyTorch</span>
           </div>
         </div>
         <div class="skill-category">
-          <h3>Perception &amp; Estimation</h3>
+          <h3>Computer Vision</h3>
           <div class="skill-tags">
-            <span>3D Gaussian Splatting</span><span>Monocular Depth</span>
-            <span>Multi-Object Tracking</span><span>SLAM</span><span>EKF / IMM</span>
-            <span>Sensor Fusion (LiDAR/RGB-D/Vision)</span><span>OpenCV</span>
+            <span>Sim2Real</span><span>3D Gaussian Splatting</span>
+            <span>Monocular Depth Estimation</span><span>Visual Localization</span>
+            <span>SLAM</span><span>Sensor Fusion (LiDAR/RGB-D/Vision)</span>
+            <span>Detection &amp; Multi-Object Tracking (YOLO, DeepSORT)</span>
           </div>
         </div>
         <div class="skill-category">
-          <h3>Planning &amp; Control</h3>
+          <h3>Robotics &amp; Autonomy</h3>
           <div class="skill-tags">
-            <span>MPC</span><span>Multi-Agent Coverage Planning</span>
-            <span>Path Planning (A*, &theta;*, DWA)</span><span>PID</span>
-            <span>GPS-Denied Navigation</span>
+            <span>Agentic Orchestrators</span><span>Multi-Agent Swarm Planning</span>
+            <span>Optimal Control / MPC</span>
+            <span>State Estimation (EKF/IMM, Particle Filter)</span>
+            <span>GPS-Denied Navigation</span><span>Path Planning (A*, &theta;*, DWA)</span>
           </div>
         </div>
         <div class="skill-category">
           <h3>Tools &amp; Infrastructure</h3>
           <div class="skill-tags">
-            <span>PyTorch</span><span>Python</span><span>C++</span><span>ROS2</span>
-            <span>Docker</span><span>Linux</span><span>Git</span><span>Gazebo</span>
-            <span>PyBullet</span><span>HPC / Cloud GPU</span><span>MATLAB</span>
+            <span>Python</span><span>C++</span><span>ROS2</span><span>NumPy</span>
+            <span>Docker</span><span>Git</span><span>Linux</span>
+            <span>MuJoCo</span><span>CARLA</span><span>Gazebo</span>
           </div>
         </div>
       </div>
@@ -534,7 +512,7 @@
           <div class="pub-badge rank">1st</div>
           <div class="pub-info">
             <h3>GKN Aerospace Sustainable Aviation Challenge</h3>
-            <p class="pub-venue">National winner &mdash; INR 300,000 prize, autonomous eVTOL systems integration</p>
+            <p class="pub-venue">National winner. INR 300,000 prize, autonomous eVTOL systems integration</p>
             <span class="pub-date">Nov 2023</span>
           </div>
         </div>
@@ -550,7 +528,7 @@
           <div class="pub-badge rank">2nd</div>
           <div class="pub-info">
             <h3>Honeywell Aerospace Ideathon</h3>
-            <p class="pub-venue">National runner-up &mdash; INR 50,000 prize</p>
+            <p class="pub-venue">National runner-up. INR 50,000 prize</p>
             <span class="pub-date">Mar 2023</span>
           </div>
         </div>
@@ -558,7 +536,7 @@
           <div class="pub-badge rank">3rd</div>
           <div class="pub-info">
             <h3>AIRBUS National Flight Challenge</h3>
-            <p class="pub-venue">Top 3 nationally &mdash; dynamic braking safety system for inclined runways</p>
+            <p class="pub-venue">Top 3 nationally. Dynamic braking safety system for inclined runways</p>
             <span class="pub-date">Feb 2024</span>
           </div>
         </div>
@@ -567,10 +545,10 @@
       <h3 class="subsection-title">Publications &amp; Patents</h3>
       <p class="edu-courses">Earlier work in aerospace materials and mechanical systems, from my undergraduate research.</p>
       <div class="edu-honors">
-        <span>Journal &middot; Grain Boundary Evolution in GRCop Alloys &mdash; Results in Engineering, Elsevier (2025)</span>
+        <span>Journal &middot; Grain Boundary Evolution in GRCop Alloys. Results in Engineering, Elsevier (2025)</span>
         <span>Journal &middot; Aerodynamic Tail Configuration Study (2025)</span>
-        <span>Patent &middot; Wear Analysis Equipment for Marine Applications &mdash; No. 202541056455</span>
-        <span>Patent &middot; Electronic Spherical Steam Trap &mdash; No. 427140-001</span>
+        <span>Patent &middot; Wear Analysis Equipment for Marine Applications, No. 202541056455</span>
+        <span>Patent &middot; Electronic Spherical Steam Trap, No. 427140-001</span>
       </div>
     </div>
   </section>
@@ -583,7 +561,7 @@
       <h2 class="section-title">Get In Touch</h2>
       <div class="contact-content">
         <p class="contact-lead">I graduate in <strong>March 2027</strong> and am looking for full-time roles in robotics, autonomy, and machine learning.</p>
-        <p>If you're working on hard problems in robot learning, perception, or vision-based control &mdash; I'd be glad to talk.</p>
+        <p>If you're working on hard problems in robot learning, perception, or vision-based control, I'd be glad to talk.</p>
         <div class="contact-links">
           <a href="mailto:kothari1@stanford.edu" class="contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
@@ -610,14 +588,14 @@
   <div id="ai-profile-text" style="display:none" aria-hidden="true">
 NAME: Aditya Kothari
 ROLE: Graduate Researcher, Robotics & Autonomous Systems
-INSTITUTION: Stanford University — MS Aeronautics & Astronautics (Sep 2025–Mar 2027), GPA 4.0/4.0
-UNDERGRADUATE: Vellore Institute of Technology — BS Mechanical Engineering (Jul 2021–Jul 2025), GPA 4.0/4.0
+INSTITUTION: Stanford University, MS Aeronautics & Astronautics (Sep 2025–Mar 2027), GPA 4.0/4.0
+UNDERGRADUATE: Vellore Institute of Technology, BS Mechanical Engineering (Jul 2021–Jul 2025), GPA 4.0/4.0
 CONTACT: kothari1@stanford.edu | +1 (408) 688-8878
 LINKEDIN: linkedin.com/in/aditya-kothari-0904a4237
 GITHUB: github.com/kothari1
 
 CURRENT RESEARCH: Stanford Multi-Robot Systems Lab / MSL (Jan 2026–Present), advisor Prof. Mac Schwager
-- AORA: agentic orchestrator for closed-loop autonomous policy training; cloud-deployed agentic "Forge" with sim-to-real
+- AORA: agentic orchestrator for closed-loop autonomous VLA policy training; cloud-deployed agentic "Forge" with full sim-to-real onto a Unitree G1 humanoid
 - System-2 visuomotor policies for language-guided drone navigation, trained in 3D Gaussian Splat simulation
 
 FELLOWSHIPS (all 2025, for graduate study at Stanford):
@@ -629,9 +607,8 @@ KEY PROJECTS:
 1. V-LEAD – RGB-only visuomotor drone navigation in 3D Gaussian Splats (github.com/kothari1/V-LEAD); ResNet-18 + frozen Depth Anything V2 cross-attention + GRU, 10-step velocity horizon at 20 Hz; MPC distillation via BC -> DAgger -> online RL; goal success 14-52% -> 75-97%, collisions 33% -> 5%; residual TD3+BC the only method to beat the imitation seed on an unseen goal object (65.1% vs 62.4%)
 2. MAVBE – Behavior-aware multi-object tracking (IMM-EKF + DeepSORT); 55% RMSE reduction, 68% fewer ID switches
 3. StarNav – GPS-free lunar localization via star pattern recognition (github.com/kothari1/StarNav); ~40 km accuracy, 99.7% search-space reduction
-4. LangDrive – Language-steered autonomous driving via VLMs (LLaVA-7B + CARLA); ~75% safe behavior rate
-5. Hierarchical RL – SAC+PPO decoupled policy for robotic manipulation (POMDP); 2x stack height vs baselines (27.18 vs 14.85)
-6. Autonomous Ground Robot – Full ROS2/C++ autonomy stack; EKF + particle filter + YOLO + A*-DWA planner
+4. Hierarchical RL – SAC+PPO decoupled policy for robotic manipulation (POMDP); 2x stack height vs baselines (27.18 vs 14.85)
+5. Autonomous Ground Robot – Full ROS2/C++ autonomy stack; EKF + particle filter + YOLO + A*-DWA planner
 
 INDUSTRY EXPERIENCE:
 - Archer Aviation (Jun–Aug 2026), Autonomy Intern: multi-agent planning pipeline for city-scale probabilistic search, shipped into production autonomy stack; Spectral Multi-Scale Coverage planner, >96% joint search optimality for 100-drone swarms at <5s cycle times; first real-world hexacopter flight tests of the Archer autonomy stack
@@ -642,7 +619,7 @@ INDUSTRY EXPERIENCE:
 PUBLICATIONS: Results in Engineering (Elsevier) – Feb 2025; Aerodynamic Tail Config Study – 2025
 PATENTS: Wear Analysis Equipment #202541056455 (2025); Electronic Spherical Steam Trap #427140-001 (2024)
 COMPETITION WINS: GKN Aerospace Rank 1 (INR 300K), Forbes Marshall Rank 1, Honeywell Rank 2, AIRBUS Rank 3
-SKILLS: PyTorch, Python, C++, ROS2, Docker, 3D Gaussian Splatting, visuomotor policies, imitation learning (BC/DAgger), reinforcement learning (SAC/PPO/TD3+BC), MPC, SLAM, EKF/IMM, sensor fusion, sim-to-real, OpenCV, Gazebo, PyBullet
+SKILLS: VLAs, visuomotor policies, foundation models, VLMs, knowledge distillation, imitation learning (BC/DAgger), reinforcement learning (TD3+BC, SAC, PPO), transformers/cross-attention, PyTorch, sim2real, 3D Gaussian Splatting, monocular depth estimation, visual localization, SLAM, sensor fusion (LiDAR/RGB-D/Vision), detection and multi-object tracking (YOLO, DeepSORT), agentic orchestrators, multi-agent swarm planning, optimal control/MPC, state estimation (EKF/IMM, particle filter), GPS-denied navigation, path planning (A*, Theta*, DWA), Python, C++, ROS2, NumPy, Docker, Git, Linux, MuJoCo, CARLA, Gazebo
 GRADUATING: March 2027
 SEEKING: Full-time roles in robotics, autonomy, computer vision, and machine learning (start 2027)
   </div>
