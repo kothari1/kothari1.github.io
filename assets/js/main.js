@@ -187,7 +187,7 @@ PATENTS: Wear Analysis Equipment #202541056455 (2025); Electronic Spherical Stea
 COMPETITION WINS: GKN Aerospace Rank 1 (INR 300K), Forbes Marshall Rank 1, Honeywell Rank 2, AIRBUS Rank 3
 SKILLS: VLAs, visuomotor policies, foundation models, VLMs, knowledge distillation, imitation learning (BC/DAgger), reinforcement learning (TD3+BC, SAC, PPO), transformers/cross-attention, PyTorch, sim2real, 3D Gaussian Splatting, monocular depth estimation, visual localization, SLAM, sensor fusion (LiDAR/RGB-D/Vision), detection and multi-object tracking (YOLO, DeepSORT), agentic orchestrators, multi-agent swarm planning, optimal control/MPC, state estimation (EKF/IMM, particle filter), GPS-denied navigation, path planning (A*, Theta*, DWA), Python, C++, ROS2, NumPy, Docker, Git, Linux, MuJoCo, CARLA, Gazebo
 GRADUATING: March 2027
-SEEKING: Full-time roles in robotics, autonomy, computer vision, and machine learning (start 2027)
+OPEN TO: Full-time roles in robotics, autonomy, computer vision, and machine learning (start 2027)
 `.trim();
 
 // ===== AI Profile Copy =====
