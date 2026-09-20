@@ -574,9 +574,13 @@ body {
 /* ===== Projects ===== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.25rem;
 }
+
+/* Two figure cards sit half-width; the three icon cards share a row of thirds. */
+.project-card { grid-column: span 2; }
+.project-card.wide { grid-column: span 3; }
 
 .project-card {
   background: #fff;
@@ -1317,3 +1321,13 @@ footer a:hover { color: var(--accent); }
 }
 
 .project-visual.figure::after { display: none; }
+
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-card,
+  .project-card.wide { grid-column: span 1; }
+}
+
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
